@@ -1,0 +1,14 @@
+[
+  {
+    "location": {
+      "latitude": 26.060416666665333,
+      "longitude": 68.93124999999594
+    },
+    "siteName": "",
+    "source": "HYBAS",
+    "river": "",
+    "gaugeId": "hybas_4121489010",
+    "qualityVerified": true,
+    "hasModel": true
+  }
+]

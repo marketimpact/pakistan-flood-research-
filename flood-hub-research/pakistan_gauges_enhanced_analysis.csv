@@ -1,0 +1,54 @@
+gauge_id,latitude,longitude,province_estimate,basin_code,quality_status,use_recommendation
+hybas_4121490220,25.97291666666547,72.29791666666267,Sindh/Balochistan,412149,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121490230,25.97291666666547,72.431249999996,Sindh/Balochistan,412149,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121490240,25.97291666666547,75.53958333332929,Sindh/Balochistan,412149,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121490150,25.98124999999873,72.993749999996,Sindh/Balochistan,412149,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121490400,25.960416666665424,66.80624999999611,Sindh/Balochistan,412149,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121490470,25.94791666666532,72.806249999996,Sindh/Balochistan,412149,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121490530,25.943749999998715,71.61041666666273,Sindh/Balochistan,412149,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121490810,25.927083333332007,70.48541666666273,Sindh/Balochistan,412149,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121490920,25.918749999998795,72.50208333332938,Sindh/Balochistan,412149,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121480760,26.685416666665333,76.23958333332928,Punjab/Sindh Border,412148,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121481030,26.65624999999875,66.5020833333295,Punjab/Sindh Border,412148,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121481070,26.652083333332087,67.48541666666279,Punjab/Sindh Border,412148,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121481080,26.652083333332,67.8770833333293,Punjab/Sindh Border,412148,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121481230,26.643749999998704,73.50624999999599,Punjab/Sindh Border,412148,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121481470,26.627083333332,68.93541666666277,Punjab/Sindh Border,412148,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121470140,27.4854166666654,72.90624999999596,Punjab/Sindh Border,412147,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121470320,27.468749999998607,68.3312499999959,Punjab/Sindh Border,412147,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121470330,27.468749999998693,72.6229166666626,Punjab/Sindh Border,412147,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121510670,24.422916666665515,70.18124999999606,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121510680,24.422916666665515,75.26041666666259,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121510850,24.40624999999864,76.2104166666627,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121510930,24.40208333333203,70.57291666666276,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121510980,24.397916666665424,69.5395833333294,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121511020,24.39374999999876,69.61874999999606,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121511210,24.381249999998715,71.8229166666627,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121511220,24.381249999998715,72.1020833333294,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121511230,24.381249999998715,74.16458333332929,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121511410,24.364583333332007,69.88124999999604,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121511420,24.364583333332007,72.5270833333293,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121511830,24.32708333333204,71.94374999999599,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121511840,24.32708333333204,76.75208333332921,Sindh/Balochistan,412151,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121461690,28.13541666666532,75.5604166666626,Punjab/Sindh Border,412146,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121461750,28.13124999999866,69.83958333332941,Punjab/Sindh Border,412146,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121461800,28.12708333333205,69.33541666666275,Punjab/Sindh Border,412146,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121520120,23.69374999999883,70.61458333332939,Sindh/Balochistan,412152,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121520170,23.68958333333217,73.92291666666262,Sindh/Balochistan,412152,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121400270,33.07708333333204,76.08124999999598,KPK/Northern Punjab,412140,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121400380,33.0687499999986,71.94374999999599,KPK/Northern Punjab,412140,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121400390,33.0687499999986,75.61458333332928,KPK/Northern Punjab,412140,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121400470,33.06041666666522,73.73124999999595,KPK/Northern Punjab,412140,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121400540,33.05208333333195,74.14791666666264,KPK/Northern Punjab,412140,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121400820,33.02708333333197,75.29374999999595,KPK/Northern Punjab,412140,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121400900,33.02291666666537,74.32291666666254,KPK/Northern Punjab,412140,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121430050,30.62291666666528,73.45624999999609,Punjab/Central,412143,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121430190,30.6104166666654,75.85624999999601,Punjab/Central,412143,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121430270,30.606249999998568,72.46458333332936,Punjab/Central,412143,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121430340,30.597916666665355,72.07708333332926,Punjab/Central,412143,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121430350,30.597916666665355,72.55208333332922,Punjab/Central,412143,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121430360,30.597916666665355,74.05208333332928,Punjab/Central,412143,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121430370,30.597916666665355,76.16458333332923,Punjab/Central,412143,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121430490,30.585416666665253,72.37291666666266,Punjab/Central,412143,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121430500,30.585416666665253,72.66041666666263,Punjab/Central,412143,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data
+hybas_4121430510,30.581249999998647,75.45624999999586,Punjab/Central,412143,UNVERIFIED - Use with caution,MEDIUM PRIORITY - Cross-validate with local data

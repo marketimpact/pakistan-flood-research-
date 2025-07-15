@@ -1,0 +1,3882 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9c9878a138101491484fba4b659960d0 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 200px; height: 120px; 
+                background-color: white; border:2px solid grey; z-index:9999; 
+                font-size:14px; padding: 10px">
+    <p><b>Gauge Quality Legend</b></p>
+    <p><i class="fa fa-star" style="color:green"></i> Quality Verified + Model</p>
+    <p><i class="fa fa-play" style="color:orange"></i> Has Model Only</p>
+    <p><i class="fa fa-ok" style="color:blue"></i> Quality Verified Only</p>
+    <p><i class="fa fa-remove" style="color:red"></i> Basic Gauge</p>
+    </div>
+    
+    
+                 <h3 align="center" style="font-size:20px"><b>Pakistan Flood Hub Gauge Coverage</b></h3>
+                 <p align="center">Demo visualization showing gauge distribution and quality</p>
+                 
+    
+            <div class="folium-map" id="map_9c9878a138101491484fba4b659960d0" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9c9878a138101491484fba4b659960d0 = L.map(
+                "map_9c9878a138101491484fba4b659960d0",
+                {
+                    center: [30.3753, 69.3451],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6674ef0170258206ef7f70dd415522bb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6674ef0170258206ef7f70dd415522bb.addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var marker_233208d69e9d29cf5a6b334c63ce3d1e = L.marker(
+                [35.655266, 75.112828],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_a3e3a1282d56e06326e6350bd7f3ef6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c8dd02d5ec69d0cad18c3e86567e40f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_68933c860f2e69a8edffe511309739cd = $(`<div id="html_68933c860f2e69a8edffe511309739cd" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_000<br>             <b>Location:</b> Sialkot<br>             <b>River:</b> Shyok<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.6553, 75.1128             </div>`)[0];
+                popup_2c8dd02d5ec69d0cad18c3e86567e40f.setContent(html_68933c860f2e69a8edffe511309739cd);
+            
+        
+
+        marker_233208d69e9d29cf5a6b334c63ce3d1e.bindPopup(popup_2c8dd02d5ec69d0cad18c3e86567e40f)
+        ;
+
+        
+    
+    
+            marker_233208d69e9d29cf5a6b334c63ce3d1e.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_000 - Sialkot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_233208d69e9d29cf5a6b334c63ce3d1e.setIcon(icon_a3e3a1282d56e06326e6350bd7f3ef6f);
+            
+    
+            var marker_830236b21bf876114256903570d788eb = L.marker(
+                [35.609177, 76.281421],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_41b28a82d1a3111e259319074e2973e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed54e42edfca7cb561ca012545199b26 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8544b3b89f233de21d0daeac48f02da3 = $(`<div id="html_8544b3b89f233de21d0daeac48f02da3" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_001<br>             <b>Location:</b> Sukkur<br>             <b>River:</b> nan<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.6092, 76.2814             </div>`)[0];
+                popup_ed54e42edfca7cb561ca012545199b26.setContent(html_8544b3b89f233de21d0daeac48f02da3);
+            
+        
+
+        marker_830236b21bf876114256903570d788eb.bindPopup(popup_ed54e42edfca7cb561ca012545199b26)
+        ;
+
+        
+    
+    
+            marker_830236b21bf876114256903570d788eb.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_001 - Sukkur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_830236b21bf876114256903570d788eb.setIcon(icon_41b28a82d1a3111e259319074e2973e3);
+            
+    
+            var marker_77e95b5fceec85d92ab9a1cb47ad2888 = L.marker(
+                [35.623145, 75.873508],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_98b19aab981be45f4e658c29786dc1eb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1eaf0ab7752d53d18d2ebaa832192141 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1233eac3b5602e503d702b03f1794f73 = $(`<div id="html_1233eac3b5602e503d702b03f1794f73" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_002<br>             <b>Location:</b> Chashma<br>             <b>River:</b> Chenab<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.6231, 75.8735             </div>`)[0];
+                popup_1eaf0ab7752d53d18d2ebaa832192141.setContent(html_1233eac3b5602e503d702b03f1794f73);
+            
+        
+
+        marker_77e95b5fceec85d92ab9a1cb47ad2888.bindPopup(popup_1eaf0ab7752d53d18d2ebaa832192141)
+        ;
+
+        
+    
+    
+            marker_77e95b5fceec85d92ab9a1cb47ad2888.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_002 - Chashma
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_77e95b5fceec85d92ab9a1cb47ad2888.setIcon(icon_98b19aab981be45f4e658c29786dc1eb);
+            
+    
+            var marker_fa99e52c469cf31787312e05fb728e89 = L.marker(
+                [29.998805, 69.421147],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_e38592cbf413a7e015881a4a9a370399 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a29f46df6d9d67af4b3aaaf5ad4f7e05 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_79c751b222ec067ab4ba543b8ead6604 = $(`<div id="html_79c751b222ec067ab4ba543b8ead6604" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_003<br>             <b>Location:</b> Attock<br>             <b>River:</b> Chitral<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 29.9988, 69.4211             </div>`)[0];
+                popup_a29f46df6d9d67af4b3aaaf5ad4f7e05.setContent(html_79c751b222ec067ab4ba543b8ead6604);
+            
+        
+
+        marker_fa99e52c469cf31787312e05fb728e89.bindPopup(popup_a29f46df6d9d67af4b3aaaf5ad4f7e05)
+        ;
+
+        
+    
+    
+            marker_fa99e52c469cf31787312e05fb728e89.bindTooltip(
+                `<div>
+                     pk_punjab_003 - Attock
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fa99e52c469cf31787312e05fb728e89.setIcon(icon_e38592cbf413a7e015881a4a9a370399);
+            
+    
+            var marker_294b876c38147f91ce79fffc57d44e31 = L.marker(
+                [25.683272, 68.070765],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_c992a5886fa9721e5db2d75ae53685e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_91b3ede29e326b9f612c37fc4eaa2130 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fae9ab3a50be1b1a05263655dd3594a4 = $(`<div id="html_fae9ab3a50be1b1a05263655dd3594a4" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_004<br>             <b>Location:</b> Multan<br>             <b>River:</b> Chenab<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 25.6833, 68.0708             </div>`)[0];
+                popup_91b3ede29e326b9f612c37fc4eaa2130.setContent(html_fae9ab3a50be1b1a05263655dd3594a4);
+            
+        
+
+        marker_294b876c38147f91ce79fffc57d44e31.bindPopup(popup_91b3ede29e326b9f612c37fc4eaa2130)
+        ;
+
+        
+    
+    
+            marker_294b876c38147f91ce79fffc57d44e31.bindTooltip(
+                `<div>
+                     pk_sindh_004 - Multan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_294b876c38147f91ce79fffc57d44e31.setIcon(icon_c992a5886fa9721e5db2d75ae53685e1);
+            
+    
+            var marker_bf7f3a7cd72827b633b1c176b8eac85b = L.marker(
+                [35.559501, 72.285072],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_124a5d5b9a5913a4a3ed3c6b09c4e4bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_11cb5e56fe46d510d3653ca2aa6ead8f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_091241162074770cd7af0c787125b838 = $(`<div id="html_091241162074770cd7af0c787125b838" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_005<br>             <b>Location:</b> Gujranwala<br>             <b>River:</b> Kabul<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.5595, 72.2851             </div>`)[0];
+                popup_11cb5e56fe46d510d3653ca2aa6ead8f.setContent(html_091241162074770cd7af0c787125b838);
+            
+        
+
+        marker_bf7f3a7cd72827b633b1c176b8eac85b.bindPopup(popup_11cb5e56fe46d510d3653ca2aa6ead8f)
+        ;
+
+        
+    
+    
+            marker_bf7f3a7cd72827b633b1c176b8eac85b.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_005 - Gujranwala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bf7f3a7cd72827b633b1c176b8eac85b.setIcon(icon_124a5d5b9a5913a4a3ed3c6b09c4e4bb);
+            
+    
+            var marker_d4dd562c8126f919efaef2f9f54acc86 = L.marker(
+                [27.107374, 67.210742],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_2bae3881e392968c25266d5c325d2f21 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0126234e65c46bc66f50baeeb8d5fde6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d6ab811ff3887865df8140a1eae1d7a = $(`<div id="html_5d6ab811ff3887865df8140a1eae1d7a" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_006<br>             <b>Location:</b> Gujranwala<br>             <b>River:</b> nan<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 27.1074, 67.2107             </div>`)[0];
+                popup_0126234e65c46bc66f50baeeb8d5fde6.setContent(html_5d6ab811ff3887865df8140a1eae1d7a);
+            
+        
+
+        marker_d4dd562c8126f919efaef2f9f54acc86.bindPopup(popup_0126234e65c46bc66f50baeeb8d5fde6)
+        ;
+
+        
+    
+    
+            marker_d4dd562c8126f919efaef2f9f54acc86.bindTooltip(
+                `<div>
+                     pk_sindh_006 - Gujranwala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4dd562c8126f919efaef2f9f54acc86.setIcon(icon_2bae3881e392968c25266d5c325d2f21);
+            
+    
+            var marker_0994c393808b12cdb0cc1ebe3b5e4890 = L.marker(
+                [25.728469, 68.389743],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_9a77ffce000dd35e71459f5eac40d014 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f4720fc7c7b5f26936d629803c699203 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ef342f4e2a586e5e20f834c345ca2333 = $(`<div id="html_ef342f4e2a586e5e20f834c345ca2333" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_007<br>             <b>Location:</b> Multan<br>             <b>River:</b> Kurram<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 25.7285, 68.3897             </div>`)[0];
+                popup_f4720fc7c7b5f26936d629803c699203.setContent(html_ef342f4e2a586e5e20f834c345ca2333);
+            
+        
+
+        marker_0994c393808b12cdb0cc1ebe3b5e4890.bindPopup(popup_f4720fc7c7b5f26936d629803c699203)
+        ;
+
+        
+    
+    
+            marker_0994c393808b12cdb0cc1ebe3b5e4890.bindTooltip(
+                `<div>
+                     pk_sindh_007 - Multan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0994c393808b12cdb0cc1ebe3b5e4890.setIcon(icon_9a77ffce000dd35e71459f5eac40d014);
+            
+    
+            var marker_f8a1a850e3b2db37942fea046b20ba8a = L.marker(
+                [30.189249, 69.59828],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_6c5379df68c0d5435237d3b30de50d2a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a70f963c86166d7d8a71b56289257ae3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ff6d7dd17670f5a4486ebc2b93c2272a = $(`<div id="html_ff6d7dd17670f5a4486ebc2b93c2272a" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_008<br>             <b>Location:</b> Skardu<br>             <b>River:</b> Hunza<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.1892, 69.5983             </div>`)[0];
+                popup_a70f963c86166d7d8a71b56289257ae3.setContent(html_ff6d7dd17670f5a4486ebc2b93c2272a);
+            
+        
+
+        marker_f8a1a850e3b2db37942fea046b20ba8a.bindPopup(popup_a70f963c86166d7d8a71b56289257ae3)
+        ;
+
+        
+    
+    
+            marker_f8a1a850e3b2db37942fea046b20ba8a.bindTooltip(
+                `<div>
+                     pk_punjab_008 - Skardu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f8a1a850e3b2db37942fea046b20ba8a.setIcon(icon_6c5379df68c0d5435237d3b30de50d2a);
+            
+    
+            var marker_fdb78e01a39afdb0f9f89644859618e0 = L.marker(
+                [34.703013, 75.370002],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_4d8c2335f7ee4dbf44b72e3eeaf3b093 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_796a6795d8ded36ebd5f144df920f4e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2954d497223729b7d9eac175eff56513 = $(`<div id="html_2954d497223729b7d9eac175eff56513" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_009<br>             <b>Location:</b> Mardan<br>             <b>River:</b> Chenab<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 34.7030, 75.3700             </div>`)[0];
+                popup_796a6795d8ded36ebd5f144df920f4e7.setContent(html_2954d497223729b7d9eac175eff56513);
+            
+        
+
+        marker_fdb78e01a39afdb0f9f89644859618e0.bindPopup(popup_796a6795d8ded36ebd5f144df920f4e7)
+        ;
+
+        
+    
+    
+            marker_fdb78e01a39afdb0f9f89644859618e0.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_009 - Mardan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fdb78e01a39afdb0f9f89644859618e0.setIcon(icon_4d8c2335f7ee4dbf44b72e3eeaf3b093);
+            
+    
+            var marker_2af2bf0384fb9f6d8faf70fa71f87b3b = L.marker(
+                [35.210299, 72.750909],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_749fd347ee8aee95838abc7587664873 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae066a55de13fbe846fbe100b5cb3b00 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f6147da16f6cfc37daeed23c5d089538 = $(`<div id="html_f6147da16f6cfc37daeed23c5d089538" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_010<br>             <b>Location:</b> Multan<br>             <b>River:</b> Indus<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.2103, 72.7509             </div>`)[0];
+                popup_ae066a55de13fbe846fbe100b5cb3b00.setContent(html_f6147da16f6cfc37daeed23c5d089538);
+            
+        
+
+        marker_2af2bf0384fb9f6d8faf70fa71f87b3b.bindPopup(popup_ae066a55de13fbe846fbe100b5cb3b00)
+        ;
+
+        
+    
+    
+            marker_2af2bf0384fb9f6d8faf70fa71f87b3b.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_010 - Multan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2af2bf0384fb9f6d8faf70fa71f87b3b.setIcon(icon_749fd347ee8aee95838abc7587664873);
+            
+    
+            var marker_bebdca8227bba1469c5b0663dc2b92ae = L.marker(
+                [33.62284, 71.706804],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_f84d47a57ecbeb1ec82f1ecf460443e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_31122693486cb4063744609a9e0ff133 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_66b33050364bae226a9923ffd4d45727 = $(`<div id="html_66b33050364bae226a9923ffd4d45727" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_011<br>             <b>Location:</b> Sukkur<br>             <b>River:</b> Sutlej<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 33.6228, 71.7068             </div>`)[0];
+                popup_31122693486cb4063744609a9e0ff133.setContent(html_66b33050364bae226a9923ffd4d45727);
+            
+        
+
+        marker_bebdca8227bba1469c5b0663dc2b92ae.bindPopup(popup_31122693486cb4063744609a9e0ff133)
+        ;
+
+        
+    
+    
+            marker_bebdca8227bba1469c5b0663dc2b92ae.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_011 - Sukkur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bebdca8227bba1469c5b0663dc2b92ae.setIcon(icon_f84d47a57ecbeb1ec82f1ecf460443e5);
+            
+    
+            var marker_4ad377002af55548717781a6f7fee4b0 = L.marker(
+                [30.832944, 69.34715],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_3a2ddbb0b2e9132ed21849de064e1030 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3cb6fdb5b0cd0aeb25a549fed22d70b3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6e1fb30c0bc08abfa7fde98e02b63f33 = $(`<div id="html_6e1fb30c0bc08abfa7fde98e02b63f33" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_012<br>             <b>Location:</b> Tarbela<br>             <b>River:</b> Kuram<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 30.8329, 69.3471             </div>`)[0];
+                popup_3cb6fdb5b0cd0aeb25a549fed22d70b3.setContent(html_6e1fb30c0bc08abfa7fde98e02b63f33);
+            
+        
+
+        marker_4ad377002af55548717781a6f7fee4b0.bindPopup(popup_3cb6fdb5b0cd0aeb25a549fed22d70b3)
+        ;
+
+        
+    
+    
+            marker_4ad377002af55548717781a6f7fee4b0.bindTooltip(
+                `<div>
+                     pk_punjab_012 - Tarbela
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ad377002af55548717781a6f7fee4b0.setIcon(icon_3a2ddbb0b2e9132ed21849de064e1030);
+            
+    
+            var marker_751317a372b56ebcb6fd644bc696049f = L.marker(
+                [29.87835, 67.252489],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_cef819642f03c0d0e273400bd613361b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f8451629d066eb916929806e9d86c30 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_08edfb29b3eb984a896d6ac2ed964f88 = $(`<div id="html_08edfb29b3eb984a896d6ac2ed964f88" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_013<br>             <b>Location:</b> Multan<br>             <b>River:</b> Indus<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 29.8784, 67.2525             </div>`)[0];
+                popup_0f8451629d066eb916929806e9d86c30.setContent(html_08edfb29b3eb984a896d6ac2ed964f88);
+            
+        
+
+        marker_751317a372b56ebcb6fd644bc696049f.bindPopup(popup_0f8451629d066eb916929806e9d86c30)
+        ;
+
+        
+    
+    
+            marker_751317a372b56ebcb6fd644bc696049f.bindTooltip(
+                `<div>
+                     pk_balochistan_013 - Multan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_751317a372b56ebcb6fd644bc696049f.setIcon(icon_cef819642f03c0d0e273400bd613361b);
+            
+    
+            var marker_e62ccb9551793dd0e5796c653bbb66bb = L.marker(
+                [35.482487, 75.30572],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_d19267b153989c7a1219f9b32e970b51 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3b94de85317b84d87c800331d47303b4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9a4fc170f880cee0bac89b0d5c425b72 = $(`<div id="html_9a4fc170f880cee0bac89b0d5c425b72" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_014<br>             <b>Location:</b> Hyderabad<br>             <b>River:</b> Shah Alam<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 35.4825, 75.3057             </div>`)[0];
+                popup_3b94de85317b84d87c800331d47303b4.setContent(html_9a4fc170f880cee0bac89b0d5c425b72);
+            
+        
+
+        marker_e62ccb9551793dd0e5796c653bbb66bb.bindPopup(popup_3b94de85317b84d87c800331d47303b4)
+        ;
+
+        
+    
+    
+            marker_e62ccb9551793dd0e5796c653bbb66bb.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_014 - Hyderabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e62ccb9551793dd0e5796c653bbb66bb.setIcon(icon_d19267b153989c7a1219f9b32e970b51);
+            
+    
+            var marker_3cbbfb741e033c45b3168a1b753da00e = L.marker(
+                [27.412439, 67.581533],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_4bfc9a76f1b9571638abb8a030a5bfb0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6f3ee7486584e5dadad229d7d87cb7d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a13a14e0a770d4f991765f8547764d25 = $(`<div id="html_a13a14e0a770d4f991765f8547764d25" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_015<br>             <b>Location:</b> Gujranwala<br>             <b>River:</b> Swat<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 27.4124, 67.5815             </div>`)[0];
+                popup_b6f3ee7486584e5dadad229d7d87cb7d.setContent(html_a13a14e0a770d4f991765f8547764d25);
+            
+        
+
+        marker_3cbbfb741e033c45b3168a1b753da00e.bindPopup(popup_b6f3ee7486584e5dadad229d7d87cb7d)
+        ;
+
+        
+    
+    
+            marker_3cbbfb741e033c45b3168a1b753da00e.bindTooltip(
+                `<div>
+                     pk_sindh_015 - Gujranwala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3cbbfb741e033c45b3168a1b753da00e.setIcon(icon_4bfc9a76f1b9571638abb8a030a5bfb0);
+            
+    
+            var marker_df33d4a7a21ca23a90ea29d01dfe0956 = L.marker(
+                [30.266806, 67.16],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_cf6d2004ed2f174473d64498771d92a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_471f70f14e69f663de8a9abc871c9c13 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ffa80afbd786d88ba0d9998b86b2b650 = $(`<div id="html_ffa80afbd786d88ba0d9998b86b2b650" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_016<br>             <b>Location:</b> Hyderabad<br>             <b>River:</b> nan<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.2668, 67.1600             </div>`)[0];
+                popup_471f70f14e69f663de8a9abc871c9c13.setContent(html_ffa80afbd786d88ba0d9998b86b2b650);
+            
+        
+
+        marker_df33d4a7a21ca23a90ea29d01dfe0956.bindPopup(popup_471f70f14e69f663de8a9abc871c9c13)
+        ;
+
+        
+    
+    
+            marker_df33d4a7a21ca23a90ea29d01dfe0956.bindTooltip(
+                `<div>
+                     pk_balochistan_016 - Hyderabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df33d4a7a21ca23a90ea29d01dfe0956.setIcon(icon_cf6d2004ed2f174473d64498771d92a2);
+            
+    
+            var marker_9513660eb0abc485d6cf19151fe8696b = L.marker(
+                [28.239944, 64.951101],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_e4a0c987cf6e8fdc38a32c33c48c7934 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_da6004b319e5305316c78238803f50f3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99cdd581e1b8646f4f1b3a6c948849b3 = $(`<div id="html_99cdd581e1b8646f4f1b3a6c948849b3" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_017<br>             <b>Location:</b> Mardan<br>             <b>River:</b> Sutlej<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 28.2399, 64.9511             </div>`)[0];
+                popup_da6004b319e5305316c78238803f50f3.setContent(html_99cdd581e1b8646f4f1b3a6c948849b3);
+            
+        
+
+        marker_9513660eb0abc485d6cf19151fe8696b.bindPopup(popup_da6004b319e5305316c78238803f50f3)
+        ;
+
+        
+    
+    
+            marker_9513660eb0abc485d6cf19151fe8696b.bindTooltip(
+                `<div>
+                     pk_balochistan_017 - Mardan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9513660eb0abc485d6cf19151fe8696b.setIcon(icon_e4a0c987cf6e8fdc38a32c33c48c7934);
+            
+    
+            var marker_c079d06277657f5237184b1c7905c2a5 = L.marker(
+                [30.172714, 69.802962],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_be38fa468dcc2d6a91a9bfcf305a14e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f6d7baa0abae2f17c80ba9ff450be89b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_98ede0a39ef20e148eb08ed80a591575 = $(`<div id="html_98ede0a39ef20e148eb08ed80a591575" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_018<br>             <b>Location:</b> Sialkot<br>             <b>River:</b> nan<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.1727, 69.8030             </div>`)[0];
+                popup_f6d7baa0abae2f17c80ba9ff450be89b.setContent(html_98ede0a39ef20e148eb08ed80a591575);
+            
+        
+
+        marker_c079d06277657f5237184b1c7905c2a5.bindPopup(popup_f6d7baa0abae2f17c80ba9ff450be89b)
+        ;
+
+        
+    
+    
+            marker_c079d06277657f5237184b1c7905c2a5.bindTooltip(
+                `<div>
+                     pk_punjab_018 - Sialkot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c079d06277657f5237184b1c7905c2a5.setIcon(icon_be38fa468dcc2d6a91a9bfcf305a14e1);
+            
+    
+            var marker_c49cfd4bf80ddf3c8c37cfbb089743dc = L.marker(
+                [31.567536, 72.300212],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_8c67749729b8a4a86ca4bb25eed68c18 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33c42e2c9811f61a0f1964d4a8becefb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a7352c2c0d7644eb81e680031a1ad21f = $(`<div id="html_a7352c2c0d7644eb81e680031a1ad21f" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_019<br>             <b>Location:</b> Sialkot<br>             <b>River:</b> Kurram<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 31.5675, 72.3002             </div>`)[0];
+                popup_33c42e2c9811f61a0f1964d4a8becefb.setContent(html_a7352c2c0d7644eb81e680031a1ad21f);
+            
+        
+
+        marker_c49cfd4bf80ddf3c8c37cfbb089743dc.bindPopup(popup_33c42e2c9811f61a0f1964d4a8becefb)
+        ;
+
+        
+    
+    
+            marker_c49cfd4bf80ddf3c8c37cfbb089743dc.bindTooltip(
+                `<div>
+                     pk_punjab_019 - Sialkot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c49cfd4bf80ddf3c8c37cfbb089743dc.setIcon(icon_8c67749729b8a4a86ca4bb25eed68c18);
+            
+    
+            var marker_90ea65900c5e717626a6fc9b6c3dbd87 = L.marker(
+                [34.175706, 72.483144],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_ec069a575d81b05d58d53dc41cd90d60 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00c01d691719bde34e892701a939be3f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_412efaf41df8e657cbd4ab0cd84a8931 = $(`<div id="html_412efaf41df8e657cbd4ab0cd84a8931" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_020<br>             <b>Location:</b> Multan<br>             <b>River:</b> Indus<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 34.1757, 72.4831             </div>`)[0];
+                popup_00c01d691719bde34e892701a939be3f.setContent(html_412efaf41df8e657cbd4ab0cd84a8931);
+            
+        
+
+        marker_90ea65900c5e717626a6fc9b6c3dbd87.bindPopup(popup_00c01d691719bde34e892701a939be3f)
+        ;
+
+        
+    
+    
+            marker_90ea65900c5e717626a6fc9b6c3dbd87.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_020 - Multan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90ea65900c5e717626a6fc9b6c3dbd87.setIcon(icon_ec069a575d81b05d58d53dc41cd90d60);
+            
+    
+            var marker_f17466d01a6e784979dcab578abd049e = L.marker(
+                [26.88766, 67.329346],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_b746cb9267839a6ff7dccd3022cf948b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f82962004d61e626e75cb5741748e705 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_54147ef996e5f8e8a9f4dad6083d5572 = $(`<div id="html_54147ef996e5f8e8a9f4dad6083d5572" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_021<br>             <b>Location:</b> Sialkot<br>             <b>River:</b> Chitral<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 26.8877, 67.3293             </div>`)[0];
+                popup_f82962004d61e626e75cb5741748e705.setContent(html_54147ef996e5f8e8a9f4dad6083d5572);
+            
+        
+
+        marker_f17466d01a6e784979dcab578abd049e.bindPopup(popup_f82962004d61e626e75cb5741748e705)
+        ;
+
+        
+    
+    
+            marker_f17466d01a6e784979dcab578abd049e.bindTooltip(
+                `<div>
+                     pk_sindh_021 - Sialkot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f17466d01a6e784979dcab578abd049e.setIcon(icon_b746cb9267839a6ff7dccd3022cf948b);
+            
+    
+            var marker_64690bbbca6ad105eab3c80613d2cfdd = L.marker(
+                [36.225962, 73.922523],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_0b1e372770203db6496f73a160f94483 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b024c9ab4a8fd431a9c95378cdde473 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2ae36d6d2ab03f7840d6ddd0c17019d5 = $(`<div id="html_2ae36d6d2ab03f7840d6ddd0c17019d5" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_022<br>             <b>Location:</b> Attock<br>             <b>River:</b> Chitral<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 36.2260, 73.9225             </div>`)[0];
+                popup_9b024c9ab4a8fd431a9c95378cdde473.setContent(html_2ae36d6d2ab03f7840d6ddd0c17019d5);
+            
+        
+
+        marker_64690bbbca6ad105eab3c80613d2cfdd.bindPopup(popup_9b024c9ab4a8fd431a9c95378cdde473)
+        ;
+
+        
+    
+    
+            marker_64690bbbca6ad105eab3c80613d2cfdd.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_022 - Attock
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_64690bbbca6ad105eab3c80613d2cfdd.setIcon(icon_0b1e372770203db6496f73a160f94483);
+            
+    
+            var marker_56e3b49f640b1dac1834df275cf7ce69 = L.marker(
+                [33.977609, 71.186121],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_a19a55b277967a55bb31a164360fa684 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a5876daa439bf248b0bb3c96e2a33334 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c88342a746c6376575b81c81c9bc70e6 = $(`<div id="html_c88342a746c6376575b81c81c9bc70e6" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_023<br>             <b>Location:</b> Nowshera<br>             <b>River:</b> Shah Alam<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 33.9776, 71.1861             </div>`)[0];
+                popup_a5876daa439bf248b0bb3c96e2a33334.setContent(html_c88342a746c6376575b81c81c9bc70e6);
+            
+        
+
+        marker_56e3b49f640b1dac1834df275cf7ce69.bindPopup(popup_a5876daa439bf248b0bb3c96e2a33334)
+        ;
+
+        
+    
+    
+            marker_56e3b49f640b1dac1834df275cf7ce69.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_023 - Nowshera
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_56e3b49f640b1dac1834df275cf7ce69.setIcon(icon_a19a55b277967a55bb31a164360fa684);
+            
+    
+            var marker_634a2bc4ca090630d5dc90782c5872f9 = L.marker(
+                [29.850584, 67.336774],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_39ba83f2824d4424c4c3b9c1053a4a95 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4daba374e8322ccf8b999580d9304461 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c0fa9f85fb2af56feffce42be05b1bed = $(`<div id="html_c0fa9f85fb2af56feffce42be05b1bed" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_024<br>             <b>Location:</b> Kalabagh<br>             <b>River:</b> Jhelum<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 29.8506, 67.3368             </div>`)[0];
+                popup_4daba374e8322ccf8b999580d9304461.setContent(html_c0fa9f85fb2af56feffce42be05b1bed);
+            
+        
+
+        marker_634a2bc4ca090630d5dc90782c5872f9.bindPopup(popup_4daba374e8322ccf8b999580d9304461)
+        ;
+
+        
+    
+    
+            marker_634a2bc4ca090630d5dc90782c5872f9.bindTooltip(
+                `<div>
+                     pk_balochistan_024 - Kalabagh
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_634a2bc4ca090630d5dc90782c5872f9.setIcon(icon_39ba83f2824d4424c4c3b9c1053a4a95);
+            
+    
+            var marker_a9eacb35fa52832611ec900c0b076650 = L.marker(
+                [34.697393, 75.082967],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_88d94aa85a21a9da82c539bfc8c3428c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3a1698a2ba51ba99bf19cfa119e9d1d5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d414f54f13053ebcd62f966066089eee = $(`<div id="html_d414f54f13053ebcd62f966066089eee" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_025<br>             <b>Location:</b> Nowshera<br>             <b>River:</b> Swat<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 34.6974, 75.0830             </div>`)[0];
+                popup_3a1698a2ba51ba99bf19cfa119e9d1d5.setContent(html_d414f54f13053ebcd62f966066089eee);
+            
+        
+
+        marker_a9eacb35fa52832611ec900c0b076650.bindPopup(popup_3a1698a2ba51ba99bf19cfa119e9d1d5)
+        ;
+
+        
+    
+    
+            marker_a9eacb35fa52832611ec900c0b076650.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_025 - Nowshera
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a9eacb35fa52832611ec900c0b076650.setIcon(icon_88d94aa85a21a9da82c539bfc8c3428c);
+            
+    
+            var marker_117cb2719d98fa8ccf59add0e69b7c6f = L.marker(
+                [30.274256, 67.317926],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_3decd6a006b12ac92997764503798069 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3dfaf9f4dcd1b06b384fcf7f9de47b63 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_09f0c75b9c25cff449c6c3f96e68b0c8 = $(`<div id="html_09f0c75b9c25cff449c6c3f96e68b0c8" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_026<br>             <b>Location:</b> Mangla<br>             <b>River:</b> Chitral<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.2743, 67.3179             </div>`)[0];
+                popup_3dfaf9f4dcd1b06b384fcf7f9de47b63.setContent(html_09f0c75b9c25cff449c6c3f96e68b0c8);
+            
+        
+
+        marker_117cb2719d98fa8ccf59add0e69b7c6f.bindPopup(popup_3dfaf9f4dcd1b06b384fcf7f9de47b63)
+        ;
+
+        
+    
+    
+            marker_117cb2719d98fa8ccf59add0e69b7c6f.bindTooltip(
+                `<div>
+                     pk_balochistan_026 - Mangla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_117cb2719d98fa8ccf59add0e69b7c6f.setIcon(icon_3decd6a006b12ac92997764503798069);
+            
+    
+            var marker_632955e8b052c38ed49c0b6580433510 = L.marker(
+                [25.419039, 68.443615],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_c6a2c6a91695da9c99225b5fdebe6c21 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_783e19a15776f1b2a34eaa532ffb2505 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e3bc03580cea225c1e93d63db63993ce = $(`<div id="html_e3bc03580cea225c1e93d63db63993ce" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_027<br>             <b>Location:</b> Mangla<br>             <b>River:</b> Swat<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 25.4190, 68.4436             </div>`)[0];
+                popup_783e19a15776f1b2a34eaa532ffb2505.setContent(html_e3bc03580cea225c1e93d63db63993ce);
+            
+        
+
+        marker_632955e8b052c38ed49c0b6580433510.bindPopup(popup_783e19a15776f1b2a34eaa532ffb2505)
+        ;
+
+        
+    
+    
+            marker_632955e8b052c38ed49c0b6580433510.bindTooltip(
+                `<div>
+                     pk_sindh_027 - Mangla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_632955e8b052c38ed49c0b6580433510.setIcon(icon_c6a2c6a91695da9c99225b5fdebe6c21);
+            
+    
+            var marker_a0120fd7935aae9f45ca2ea59e0d5227 = L.marker(
+                [34.486808, 72.624603],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_d1e2c3ee4e1bf7415bdc8adffb01b39c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b41d16824badd95234554e087eecb938 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d4c5221428fd08591a04ca367d47ece1 = $(`<div id="html_d4c5221428fd08591a04ca367d47ece1" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_028<br>             <b>Location:</b> Hyderabad<br>             <b>River:</b> Chitral<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 34.4868, 72.6246             </div>`)[0];
+                popup_b41d16824badd95234554e087eecb938.setContent(html_d4c5221428fd08591a04ca367d47ece1);
+            
+        
+
+        marker_a0120fd7935aae9f45ca2ea59e0d5227.bindPopup(popup_b41d16824badd95234554e087eecb938)
+        ;
+
+        
+    
+    
+            marker_a0120fd7935aae9f45ca2ea59e0d5227.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_028 - Hyderabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0120fd7935aae9f45ca2ea59e0d5227.setIcon(icon_d1e2c3ee4e1bf7415bdc8adffb01b39c);
+            
+    
+            var marker_934169f26a0a778c5042b5c48fa39a92 = L.marker(
+                [26.749241, 67.022788],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_c9804eb4b77ffabdba3921a55f76156e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_528f6c6b98c8664df05cce1c312a08ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5fb01807d2142f54fd468158933247bc = $(`<div id="html_5fb01807d2142f54fd468158933247bc" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_029<br>             <b>Location:</b> Multan<br>             <b>River:</b> Chitral<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 26.7492, 67.0228             </div>`)[0];
+                popup_528f6c6b98c8664df05cce1c312a08ac.setContent(html_5fb01807d2142f54fd468158933247bc);
+            
+        
+
+        marker_934169f26a0a778c5042b5c48fa39a92.bindPopup(popup_528f6c6b98c8664df05cce1c312a08ac)
+        ;
+
+        
+    
+    
+            marker_934169f26a0a778c5042b5c48fa39a92.bindTooltip(
+                `<div>
+                     pk_sindh_029 - Multan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_934169f26a0a778c5042b5c48fa39a92.setIcon(icon_c9804eb4b77ffabdba3921a55f76156e);
+            
+    
+            var marker_95072be6037408b6e4a9036e844460cd = L.marker(
+                [35.752603, 74.290889],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_47ed013d2232b9581e025e8f8adf5c32 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec2a4e275fce4b75bc66da26b5004895 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_dba7254f2071b63924bd466a5c906cbb = $(`<div id="html_dba7254f2071b63924bd466a5c906cbb" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_030<br>             <b>Location:</b> Jacobabad<br>             <b>River:</b> Ravi<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.7526, 74.2909             </div>`)[0];
+                popup_ec2a4e275fce4b75bc66da26b5004895.setContent(html_dba7254f2071b63924bd466a5c906cbb);
+            
+        
+
+        marker_95072be6037408b6e4a9036e844460cd.bindPopup(popup_ec2a4e275fce4b75bc66da26b5004895)
+        ;
+
+        
+    
+    
+            marker_95072be6037408b6e4a9036e844460cd.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_030 - Jacobabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_95072be6037408b6e4a9036e844460cd.setIcon(icon_47ed013d2232b9581e025e8f8adf5c32);
+            
+    
+            var marker_3b4742baadec23f3a9038c5d094b791b = L.marker(
+                [35.968614, 73.853755],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_09b09785c54290cc4072425a43e63afe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_826835103f5371160314749355afb87f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7354d740f63b27efe8846bc02e233833 = $(`<div id="html_7354d740f63b27efe8846bc02e233833" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_031<br>             <b>Location:</b> Kotri<br>             <b>River:</b> nan<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.9686, 73.8538             </div>`)[0];
+                popup_826835103f5371160314749355afb87f.setContent(html_7354d740f63b27efe8846bc02e233833);
+            
+        
+
+        marker_3b4742baadec23f3a9038c5d094b791b.bindPopup(popup_826835103f5371160314749355afb87f)
+        ;
+
+        
+    
+    
+            marker_3b4742baadec23f3a9038c5d094b791b.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_031 - Kotri
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b4742baadec23f3a9038c5d094b791b.setIcon(icon_09b09785c54290cc4072425a43e63afe);
+            
+    
+            var marker_1ce48d53c803a6c62ab4157fb60aac41 = L.marker(
+                [30.260115, 67.210826],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_0abee98f644a5f3e3bb628e42b4940b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99527d316a919ded3ad983f23538d6c4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_48ca53855b1a977cd55a2a903c9c33b4 = $(`<div id="html_48ca53855b1a977cd55a2a903c9c33b4" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_032<br>             <b>Location:</b> Skardu<br>             <b>River:</b> Chitral<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.2601, 67.2108             </div>`)[0];
+                popup_99527d316a919ded3ad983f23538d6c4.setContent(html_48ca53855b1a977cd55a2a903c9c33b4);
+            
+        
+
+        marker_1ce48d53c803a6c62ab4157fb60aac41.bindPopup(popup_99527d316a919ded3ad983f23538d6c4)
+        ;
+
+        
+    
+    
+            marker_1ce48d53c803a6c62ab4157fb60aac41.bindTooltip(
+                `<div>
+                     pk_balochistan_032 - Skardu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1ce48d53c803a6c62ab4157fb60aac41.setIcon(icon_0abee98f644a5f3e3bb628e42b4940b9);
+            
+    
+            var marker_9d02dd13db7a09546d4adbb02f36f970 = L.marker(
+                [30.857834, 69.325704],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_025d18974192a079b1d96e453967df8f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_603ba88934270046344c0f26824d7f0a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b26c178e4df8613d19065ae0bdf54754 = $(`<div id="html_b26c178e4df8613d19065ae0bdf54754" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_033<br>             <b>Location:</b> Sialkot<br>             <b>River:</b> Kurram<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.8578, 69.3257             </div>`)[0];
+                popup_603ba88934270046344c0f26824d7f0a.setContent(html_b26c178e4df8613d19065ae0bdf54754);
+            
+        
+
+        marker_9d02dd13db7a09546d4adbb02f36f970.bindPopup(popup_603ba88934270046344c0f26824d7f0a)
+        ;
+
+        
+    
+    
+            marker_9d02dd13db7a09546d4adbb02f36f970.bindTooltip(
+                `<div>
+                     pk_punjab_033 - Sialkot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9d02dd13db7a09546d4adbb02f36f970.setIcon(icon_025d18974192a079b1d96e453967df8f);
+            
+    
+            var marker_2084a3df0425ae8b4efb5dffc3e49f10 = L.marker(
+                [30.046363, 67.038264],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_dab658de6ac5c4e254ccae5253370478 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc52ed3a3a99651b41c1a82239b803dd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f98651dacf4986ef048b8710d0e55e09 = $(`<div id="html_f98651dacf4986ef048b8710d0e55e09" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_034<br>             <b>Location:</b> Sukkur<br>             <b>River:</b> Gilgit<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 30.0464, 67.0383             </div>`)[0];
+                popup_dc52ed3a3a99651b41c1a82239b803dd.setContent(html_f98651dacf4986ef048b8710d0e55e09);
+            
+        
+
+        marker_2084a3df0425ae8b4efb5dffc3e49f10.bindPopup(popup_dc52ed3a3a99651b41c1a82239b803dd)
+        ;
+
+        
+    
+    
+            marker_2084a3df0425ae8b4efb5dffc3e49f10.bindTooltip(
+                `<div>
+                     pk_balochistan_034 - Sukkur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2084a3df0425ae8b4efb5dffc3e49f10.setIcon(icon_dab658de6ac5c4e254ccae5253370478);
+            
+    
+            var marker_f1bbad30147ef431dbc1b15be0c7a697 = L.marker(
+                [33.926011, 73.166107],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_4e0435a32f7a731602904f0573d3404d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5da5666d7521b591a28d922e4fa09b99 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_086a5f993a0a1af1129f02e9814d88c0 = $(`<div id="html_086a5f993a0a1af1129f02e9814d88c0" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_035<br>             <b>Location:</b> Mardan<br>             <b>River:</b> nan<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 33.9260, 73.1661             </div>`)[0];
+                popup_5da5666d7521b591a28d922e4fa09b99.setContent(html_086a5f993a0a1af1129f02e9814d88c0);
+            
+        
+
+        marker_f1bbad30147ef431dbc1b15be0c7a697.bindPopup(popup_5da5666d7521b591a28d922e4fa09b99)
+        ;
+
+        
+    
+    
+            marker_f1bbad30147ef431dbc1b15be0c7a697.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_035 - Mardan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1bbad30147ef431dbc1b15be0c7a697.setIcon(icon_4e0435a32f7a731602904f0573d3404d);
+            
+    
+            var marker_5751af4711e9fd0ab8ee04a8a2079860 = L.marker(
+                [34.120335, 72.022537],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_c89e617944d8d09effe78ca973bda960 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b7efbaffd07e8ca73fbfcdcd36721c04 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eba9ab05bd6813aa73acea65c2614129 = $(`<div id="html_eba9ab05bd6813aa73acea65c2614129" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_036<br>             <b>Location:</b> Gilgit<br>             <b>River:</b> Kabul<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 34.1203, 72.0225             </div>`)[0];
+                popup_b7efbaffd07e8ca73fbfcdcd36721c04.setContent(html_eba9ab05bd6813aa73acea65c2614129);
+            
+        
+
+        marker_5751af4711e9fd0ab8ee04a8a2079860.bindPopup(popup_b7efbaffd07e8ca73fbfcdcd36721c04)
+        ;
+
+        
+    
+    
+            marker_5751af4711e9fd0ab8ee04a8a2079860.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_036 - Gilgit
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5751af4711e9fd0ab8ee04a8a2079860.setIcon(icon_c89e617944d8d09effe78ca973bda960);
+            
+    
+            var marker_0bc7b206b1a87a2e38e4fccc7e079cb9 = L.marker(
+                [29.975899, 68.932597],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_0e5e147be3d577424131d0c425172a71 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2420dc29662b6ba9a540062ea0f6ebf6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eb685d10579ecbeb0e1107f58baf3a72 = $(`<div id="html_eb685d10579ecbeb0e1107f58baf3a72" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_037<br>             <b>Location:</b> Mangla<br>             <b>River:</b> nan<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 29.9759, 68.9326             </div>`)[0];
+                popup_2420dc29662b6ba9a540062ea0f6ebf6.setContent(html_eb685d10579ecbeb0e1107f58baf3a72);
+            
+        
+
+        marker_0bc7b206b1a87a2e38e4fccc7e079cb9.bindPopup(popup_2420dc29662b6ba9a540062ea0f6ebf6)
+        ;
+
+        
+    
+    
+            marker_0bc7b206b1a87a2e38e4fccc7e079cb9.bindTooltip(
+                `<div>
+                     pk_punjab_037 - Mangla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0bc7b206b1a87a2e38e4fccc7e079cb9.setIcon(icon_0e5e147be3d577424131d0c425172a71);
+            
+    
+            var marker_b065c63de87c0aff92fb9a997eed8c3d = L.marker(
+                [29.971051, 69.173078],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_3dbcb702d381f4b7527919721f127a47 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9f8ebaa5dbc7a2e4d2aafda1a8750937 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eef0000f2f79fc3f4c88b3a074fd4f95 = $(`<div id="html_eef0000f2f79fc3f4c88b3a074fd4f95" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_038<br>             <b>Location:</b> Kotri<br>             <b>River:</b> nan<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 29.9711, 69.1731             </div>`)[0];
+                popup_9f8ebaa5dbc7a2e4d2aafda1a8750937.setContent(html_eef0000f2f79fc3f4c88b3a074fd4f95);
+            
+        
+
+        marker_b065c63de87c0aff92fb9a997eed8c3d.bindPopup(popup_9f8ebaa5dbc7a2e4d2aafda1a8750937)
+        ;
+
+        
+    
+    
+            marker_b065c63de87c0aff92fb9a997eed8c3d.bindTooltip(
+                `<div>
+                     pk_punjab_038 - Kotri
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b065c63de87c0aff92fb9a997eed8c3d.setIcon(icon_3dbcb702d381f4b7527919721f127a47);
+            
+    
+            var marker_594679143b7865df09a2340161aa16c0 = L.marker(
+                [35.866753, 74.425463],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_f90748c595d5d64c93d6741c44cd9f1a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac2d6f16d6b71a0ecd2767c2c5922bec = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c2f79a7632427673f6e4faa95288383b = $(`<div id="html_c2f79a7632427673f6e4faa95288383b" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_039<br>             <b>Location:</b> Hyderabad<br>             <b>River:</b> Swat<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.8668, 74.4255             </div>`)[0];
+                popup_ac2d6f16d6b71a0ecd2767c2c5922bec.setContent(html_c2f79a7632427673f6e4faa95288383b);
+            
+        
+
+        marker_594679143b7865df09a2340161aa16c0.bindPopup(popup_ac2d6f16d6b71a0ecd2767c2c5922bec)
+        ;
+
+        
+    
+    
+            marker_594679143b7865df09a2340161aa16c0.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_039 - Hyderabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_594679143b7865df09a2340161aa16c0.setIcon(icon_f90748c595d5d64c93d6741c44cd9f1a);
+            
+    
+            var marker_fdc0a4d605ec23eeb271f90c4bc3beb6 = L.marker(
+                [33.676394, 72.965922],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_93d66cc09e90e864f95d60a9e794aac2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b47905b1f7dd02d72ef051431f446c32 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1097a5dde422a76493b7d187f40879fe = $(`<div id="html_1097a5dde422a76493b7d187f40879fe" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_040<br>             <b>Location:</b> Gujranwala<br>             <b>River:</b> Shyok<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 33.6764, 72.9659             </div>`)[0];
+                popup_b47905b1f7dd02d72ef051431f446c32.setContent(html_1097a5dde422a76493b7d187f40879fe);
+            
+        
+
+        marker_fdc0a4d605ec23eeb271f90c4bc3beb6.bindPopup(popup_b47905b1f7dd02d72ef051431f446c32)
+        ;
+
+        
+    
+    
+            marker_fdc0a4d605ec23eeb271f90c4bc3beb6.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_040 - Gujranwala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fdc0a4d605ec23eeb271f90c4bc3beb6.setIcon(icon_93d66cc09e90e864f95d60a9e794aac2);
+            
+    
+            var marker_554bb6ce80865d6bf73b650caa522942 = L.marker(
+                [35.370342, 72.25678],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_0fc3266c601e19591e147cf774e81254 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3224f7429f12fc92406bb2e462ed43d1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_11fe3d8e8297dfaf0b23368b2ee3a90f = $(`<div id="html_11fe3d8e8297dfaf0b23368b2ee3a90f" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_041<br>             <b>Location:</b> Tarbela<br>             <b>River:</b> Swat<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.3703, 72.2568             </div>`)[0];
+                popup_3224f7429f12fc92406bb2e462ed43d1.setContent(html_11fe3d8e8297dfaf0b23368b2ee3a90f);
+            
+        
+
+        marker_554bb6ce80865d6bf73b650caa522942.bindPopup(popup_3224f7429f12fc92406bb2e462ed43d1)
+        ;
+
+        
+    
+    
+            marker_554bb6ce80865d6bf73b650caa522942.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_041 - Tarbela
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_554bb6ce80865d6bf73b650caa522942.setIcon(icon_0fc3266c601e19591e147cf774e81254);
+            
+    
+            var marker_3c873d8b96f66f32de9ae17cd23482e5 = L.marker(
+                [30.303117, 66.661249],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_bff39553ec50552c5ca493ede0fc2b39 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1961a0a383097f587c9133c90f2afb8a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9781838e0c253328d09d940ec7f2c031 = $(`<div id="html_9781838e0c253328d09d940ec7f2c031" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_042<br>             <b>Location:</b> Skardu<br>             <b>River:</b> Gilgit<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.3031, 66.6612             </div>`)[0];
+                popup_1961a0a383097f587c9133c90f2afb8a.setContent(html_9781838e0c253328d09d940ec7f2c031);
+            
+        
+
+        marker_3c873d8b96f66f32de9ae17cd23482e5.bindPopup(popup_1961a0a383097f587c9133c90f2afb8a)
+        ;
+
+        
+    
+    
+            marker_3c873d8b96f66f32de9ae17cd23482e5.bindTooltip(
+                `<div>
+                     pk_balochistan_042 - Skardu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3c873d8b96f66f32de9ae17cd23482e5.setIcon(icon_bff39553ec50552c5ca493ede0fc2b39);
+            
+    
+            var marker_a1c75ce1a9b0027e3ef3a660bbf1b18c = L.marker(
+                [29.989101, 67.449494],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_e7b8c0910e68b6761fdc7ee1e31ae702 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24831a28c714b47192fe011cc3563e6a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_be2d330e88e80b984dbbf65296cb8201 = $(`<div id="html_be2d330e88e80b984dbbf65296cb8201" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_043<br>             <b>Location:</b> Sukkur<br>             <b>River:</b> Kurram<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 29.9891, 67.4495             </div>`)[0];
+                popup_24831a28c714b47192fe011cc3563e6a.setContent(html_be2d330e88e80b984dbbf65296cb8201);
+            
+        
+
+        marker_a1c75ce1a9b0027e3ef3a660bbf1b18c.bindPopup(popup_24831a28c714b47192fe011cc3563e6a)
+        ;
+
+        
+    
+    
+            marker_a1c75ce1a9b0027e3ef3a660bbf1b18c.bindTooltip(
+                `<div>
+                     pk_balochistan_043 - Sukkur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a1c75ce1a9b0027e3ef3a660bbf1b18c.setIcon(icon_e7b8c0910e68b6761fdc7ee1e31ae702);
+            
+    
+            var marker_f40039d4135651d9df7eeda6976c3eb4 = L.marker(
+                [25.532926, 68.971296],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_00b57a90d4076b8899ddb3af297b9ef1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_92f5fa89c6a7d65e8e55de645169eb55 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ca511216d29edf0635be11546e7e25a8 = $(`<div id="html_ca511216d29edf0635be11546e7e25a8" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_044<br>             <b>Location:</b> Sukkur<br>             <b>River:</b> Kabul<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 25.5329, 68.9713             </div>`)[0];
+                popup_92f5fa89c6a7d65e8e55de645169eb55.setContent(html_ca511216d29edf0635be11546e7e25a8);
+            
+        
+
+        marker_f40039d4135651d9df7eeda6976c3eb4.bindPopup(popup_92f5fa89c6a7d65e8e55de645169eb55)
+        ;
+
+        
+    
+    
+            marker_f40039d4135651d9df7eeda6976c3eb4.bindTooltip(
+                `<div>
+                     pk_sindh_044 - Sukkur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f40039d4135651d9df7eeda6976c3eb4.setIcon(icon_00b57a90d4076b8899ddb3af297b9ef1);
+            
+    
+            var marker_f052b3c0951dd47ddc6f821e55ee0faa = L.marker(
+                [34.70075, 75.621911],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_0f7a0ed7d10a2f53028eb9feef09e27c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8020d67eb29070b2167cb44704775c0b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_07702d2d4ed25c4cd21513351c56d830 = $(`<div id="html_07702d2d4ed25c4cd21513351c56d830" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_045<br>             <b>Location:</b> Skardu<br>             <b>River:</b> Ravi<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 34.7007, 75.6219             </div>`)[0];
+                popup_8020d67eb29070b2167cb44704775c0b.setContent(html_07702d2d4ed25c4cd21513351c56d830);
+            
+        
+
+        marker_f052b3c0951dd47ddc6f821e55ee0faa.bindPopup(popup_8020d67eb29070b2167cb44704775c0b)
+        ;
+
+        
+    
+    
+            marker_f052b3c0951dd47ddc6f821e55ee0faa.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_045 - Skardu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f052b3c0951dd47ddc6f821e55ee0faa.setIcon(icon_0f7a0ed7d10a2f53028eb9feef09e27c);
+            
+    
+            var marker_2e5b7ebf367d61253e95964b7719809a = L.marker(
+                [30.000944, 69.412876],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_4f652c265d86ba850055124ce92efd0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_42b96e1b5db4ac3c7f6d72f35ab6d33f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8fef116791dd9bd5e70d3c556151985f = $(`<div id="html_8fef116791dd9bd5e70d3c556151985f" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_046<br>             <b>Location:</b> Gujranwala<br>             <b>River:</b> nan<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.0009, 69.4129             </div>`)[0];
+                popup_42b96e1b5db4ac3c7f6d72f35ab6d33f.setContent(html_8fef116791dd9bd5e70d3c556151985f);
+            
+        
+
+        marker_2e5b7ebf367d61253e95964b7719809a.bindPopup(popup_42b96e1b5db4ac3c7f6d72f35ab6d33f)
+        ;
+
+        
+    
+    
+            marker_2e5b7ebf367d61253e95964b7719809a.bindTooltip(
+                `<div>
+                     pk_punjab_046 - Gujranwala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e5b7ebf367d61253e95964b7719809a.setIcon(icon_4f652c265d86ba850055124ce92efd0e);
+            
+    
+            var marker_0b75df4afc2f84c21f828bc376aa0a26 = L.marker(
+                [35.397728, 72.168605],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_b2aa3249ccd5f643a4b6f7ebdd41d627 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa1223bc5b399c867295a555a5e49ff8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_10af09578f6bf330b92b9ebe49e69e71 = $(`<div id="html_10af09578f6bf330b92b9ebe49e69e71" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_047<br>             <b>Location:</b> Kotri<br>             <b>River:</b> Chenab<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 35.3977, 72.1686             </div>`)[0];
+                popup_aa1223bc5b399c867295a555a5e49ff8.setContent(html_10af09578f6bf330b92b9ebe49e69e71);
+            
+        
+
+        marker_0b75df4afc2f84c21f828bc376aa0a26.bindPopup(popup_aa1223bc5b399c867295a555a5e49ff8)
+        ;
+
+        
+    
+    
+            marker_0b75df4afc2f84c21f828bc376aa0a26.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_047 - Kotri
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0b75df4afc2f84c21f828bc376aa0a26.setIcon(icon_b2aa3249ccd5f643a4b6f7ebdd41d627);
+            
+    
+            var marker_87459e708ecb025aff19cb730b487f03 = L.marker(
+                [30.105204, 67.363836],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_96920a0b819e195973299f66e9c05fbf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce08485c4bf8bb70eeeafd4805515cdb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5b3c9ae7d543662130a60c831a7f6e12 = $(`<div id="html_5b3c9ae7d543662130a60c831a7f6e12" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_048<br>             <b>Location:</b> Mangla<br>             <b>River:</b> nan<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.1052, 67.3638             </div>`)[0];
+                popup_ce08485c4bf8bb70eeeafd4805515cdb.setContent(html_5b3c9ae7d543662130a60c831a7f6e12);
+            
+        
+
+        marker_87459e708ecb025aff19cb730b487f03.bindPopup(popup_ce08485c4bf8bb70eeeafd4805515cdb)
+        ;
+
+        
+    
+    
+            marker_87459e708ecb025aff19cb730b487f03.bindTooltip(
+                `<div>
+                     pk_balochistan_048 - Mangla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_87459e708ecb025aff19cb730b487f03.setIcon(icon_96920a0b819e195973299f66e9c05fbf);
+            
+    
+            var marker_97df894e809542eefc90510b0e00b705 = L.marker(
+                [34.839521, 75.823607],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_006ce425bc8ee8d0a8a29bf988fb1098 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_31eb9423566220abb83e47b2a32a813c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d13d9e4aaf42a51f976c7ace5e009088 = $(`<div id="html_d13d9e4aaf42a51f976c7ace5e009088" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_049<br>             <b>Location:</b> Nowshera<br>             <b>River:</b> Kabul<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 34.8395, 75.8236             </div>`)[0];
+                popup_31eb9423566220abb83e47b2a32a813c.setContent(html_d13d9e4aaf42a51f976c7ace5e009088);
+            
+        
+
+        marker_97df894e809542eefc90510b0e00b705.bindPopup(popup_31eb9423566220abb83e47b2a32a813c)
+        ;
+
+        
+    
+    
+            marker_97df894e809542eefc90510b0e00b705.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_049 - Nowshera
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_97df894e809542eefc90510b0e00b705.setIcon(icon_006ce425bc8ee8d0a8a29bf988fb1098);
+            
+    
+            var marker_206311a8ebad70113e4cd07d0c6832aa = L.marker(
+                [26.297593, 68.872228],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_387faed8946e0906d0d9eac26f5c31be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6935690d680b084ad33a0fbca0199e29 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_027246d982b30a6576b8e6bb84d0cc10 = $(`<div id="html_027246d982b30a6576b8e6bb84d0cc10" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_050<br>             <b>Location:</b> Hyderabad<br>             <b>River:</b> Sutlej<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 26.2976, 68.8722             </div>`)[0];
+                popup_6935690d680b084ad33a0fbca0199e29.setContent(html_027246d982b30a6576b8e6bb84d0cc10);
+            
+        
+
+        marker_206311a8ebad70113e4cd07d0c6832aa.bindPopup(popup_6935690d680b084ad33a0fbca0199e29)
+        ;
+
+        
+    
+    
+            marker_206311a8ebad70113e4cd07d0c6832aa.bindTooltip(
+                `<div>
+                     pk_sindh_050 - Hyderabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_206311a8ebad70113e4cd07d0c6832aa.setIcon(icon_387faed8946e0906d0d9eac26f5c31be);
+            
+    
+            var marker_c2c8e1fc31d11da3e1fb439756e2b26d = L.marker(
+                [35.611301, 72.639571],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_203099b249b403ef526b04d048b7b560 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca34c7cc4b01cfc237227f77534e52f4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9edef5a8809ab85d7e6e877e6b25e80d = $(`<div id="html_9edef5a8809ab85d7e6e877e6b25e80d" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_051<br>             <b>Location:</b> Mangla<br>             <b>River:</b> nan<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.6113, 72.6396             </div>`)[0];
+                popup_ca34c7cc4b01cfc237227f77534e52f4.setContent(html_9edef5a8809ab85d7e6e877e6b25e80d);
+            
+        
+
+        marker_c2c8e1fc31d11da3e1fb439756e2b26d.bindPopup(popup_ca34c7cc4b01cfc237227f77534e52f4)
+        ;
+
+        
+    
+    
+            marker_c2c8e1fc31d11da3e1fb439756e2b26d.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_051 - Mangla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c2c8e1fc31d11da3e1fb439756e2b26d.setIcon(icon_203099b249b403ef526b04d048b7b560);
+            
+    
+            var marker_32b860b6b37a3c05f81f0c9bfc8db1ff = L.marker(
+                [26.881307, 66.969151],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_044be3a5ab36db95278658871493c330 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b950936261ccd359a78b56128edc2c65 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f78150e314d0f9a9854e9925fb9a4f8b = $(`<div id="html_f78150e314d0f9a9854e9925fb9a4f8b" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_052<br>             <b>Location:</b> Tarbela<br>             <b>River:</b> Indus<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 26.8813, 66.9692             </div>`)[0];
+                popup_b950936261ccd359a78b56128edc2c65.setContent(html_f78150e314d0f9a9854e9925fb9a4f8b);
+            
+        
+
+        marker_32b860b6b37a3c05f81f0c9bfc8db1ff.bindPopup(popup_b950936261ccd359a78b56128edc2c65)
+        ;
+
+        
+    
+    
+            marker_32b860b6b37a3c05f81f0c9bfc8db1ff.bindTooltip(
+                `<div>
+                     pk_sindh_052 - Tarbela
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_32b860b6b37a3c05f81f0c9bfc8db1ff.setIcon(icon_044be3a5ab36db95278658871493c330);
+            
+    
+            var marker_abad4801587f94d8ef2dcbe74745c754 = L.marker(
+                [30.632126, 69.319753],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_148a17e91fe12bebb6e5e4559c835d3a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a30b538525dfac6ed12f10e51c63efca = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36a89761c641d86c0f9771e6534163ae = $(`<div id="html_36a89761c641d86c0f9771e6534163ae" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_053<br>             <b>Location:</b> Larkana<br>             <b>River:</b> Ravi<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.6321, 69.3198             </div>`)[0];
+                popup_a30b538525dfac6ed12f10e51c63efca.setContent(html_36a89761c641d86c0f9771e6534163ae);
+            
+        
+
+        marker_abad4801587f94d8ef2dcbe74745c754.bindPopup(popup_a30b538525dfac6ed12f10e51c63efca)
+        ;
+
+        
+    
+    
+            marker_abad4801587f94d8ef2dcbe74745c754.bindTooltip(
+                `<div>
+                     pk_punjab_053 - Larkana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_abad4801587f94d8ef2dcbe74745c754.setIcon(icon_148a17e91fe12bebb6e5e4559c835d3a);
+            
+    
+            var marker_53a02dbaccd9bb4d50190794c84ca905 = L.marker(
+                [35.500933, 75.653945],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_d6d37d7e41b3eea50e714c980915cc80 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ca17033405da966555c9b52619a06617 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b4eed146af996c833af5f83627afa5cb = $(`<div id="html_b4eed146af996c833af5f83627afa5cb" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_054<br>             <b>Location:</b> Mangla<br>             <b>River:</b> Shyok<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 35.5009, 75.6539             </div>`)[0];
+                popup_ca17033405da966555c9b52619a06617.setContent(html_b4eed146af996c833af5f83627afa5cb);
+            
+        
+
+        marker_53a02dbaccd9bb4d50190794c84ca905.bindPopup(popup_ca17033405da966555c9b52619a06617)
+        ;
+
+        
+    
+    
+            marker_53a02dbaccd9bb4d50190794c84ca905.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_054 - Mangla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_53a02dbaccd9bb4d50190794c84ca905.setIcon(icon_d6d37d7e41b3eea50e714c980915cc80);
+            
+    
+            var marker_486420cbf7ee7a979068ab639143f467 = L.marker(
+                [34.135653, 71.995596],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_877863ac415374d0474097fe5e61e239 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db4476c3d65883dad3a9949786f4c0f4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f04b5e94e058a3db02bec14610619355 = $(`<div id="html_f04b5e94e058a3db02bec14610619355" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_055<br>             <b>Location:</b> Gilgit<br>             <b>River:</b> Chitral<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 34.1357, 71.9956             </div>`)[0];
+                popup_db4476c3d65883dad3a9949786f4c0f4.setContent(html_f04b5e94e058a3db02bec14610619355);
+            
+        
+
+        marker_486420cbf7ee7a979068ab639143f467.bindPopup(popup_db4476c3d65883dad3a9949786f4c0f4)
+        ;
+
+        
+    
+    
+            marker_486420cbf7ee7a979068ab639143f467.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_055 - Gilgit
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_486420cbf7ee7a979068ab639143f467.setIcon(icon_877863ac415374d0474097fe5e61e239);
+            
+    
+            var marker_ccef8256a2a7da63361fd9291c151b4e = L.marker(
+                [35.463127, 72.463389],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_41dcfffcacd0cc9e13cbc3edc59ed43a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47bcec6956d17c59ff736872c2450e9f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36370aafd81349dc946e962c42d300d5 = $(`<div id="html_36370aafd81349dc946e962c42d300d5" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_056<br>             <b>Location:</b> Nowshera<br>             <b>River:</b> Ravi<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.4631, 72.4634             </div>`)[0];
+                popup_47bcec6956d17c59ff736872c2450e9f.setContent(html_36370aafd81349dc946e962c42d300d5);
+            
+        
+
+        marker_ccef8256a2a7da63361fd9291c151b4e.bindPopup(popup_47bcec6956d17c59ff736872c2450e9f)
+        ;
+
+        
+    
+    
+            marker_ccef8256a2a7da63361fd9291c151b4e.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_056 - Nowshera
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ccef8256a2a7da63361fd9291c151b4e.setIcon(icon_41dcfffcacd0cc9e13cbc3edc59ed43a);
+            
+    
+            var marker_86041a728a098e5b7f3c713b922b2dc3 = L.marker(
+                [29.804372, 66.979818],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_5677bb28647262b75eea849c933d4ccb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c4ece6b55bf68af15b7ecf381edbb9b1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5ee5eb294e5a208dcdcc49273435bb5f = $(`<div id="html_5ee5eb294e5a208dcdcc49273435bb5f" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_057<br>             <b>Location:</b> Bahawalpur<br>             <b>River:</b> Chitral<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 29.8044, 66.9798             </div>`)[0];
+                popup_c4ece6b55bf68af15b7ecf381edbb9b1.setContent(html_5ee5eb294e5a208dcdcc49273435bb5f);
+            
+        
+
+        marker_86041a728a098e5b7f3c713b922b2dc3.bindPopup(popup_c4ece6b55bf68af15b7ecf381edbb9b1)
+        ;
+
+        
+    
+    
+            marker_86041a728a098e5b7f3c713b922b2dc3.bindTooltip(
+                `<div>
+                     pk_balochistan_057 - Bahawalpur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_86041a728a098e5b7f3c713b922b2dc3.setIcon(icon_5677bb28647262b75eea849c933d4ccb);
+            
+    
+            var marker_6e423abfb4f09ea977f97916352d7dcf = L.marker(
+                [26.666879, 67.543951],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_bbd8bd17349cf67e59756825f059dad8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b63332de808d002dcff38cff798d293 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d8f9108a627a12dbba218fd3003e70b5 = $(`<div id="html_d8f9108a627a12dbba218fd3003e70b5" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_058<br>             <b>Location:</b> Sialkot<br>             <b>River:</b> Shah Alam<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 26.6669, 67.5440             </div>`)[0];
+                popup_8b63332de808d002dcff38cff798d293.setContent(html_d8f9108a627a12dbba218fd3003e70b5);
+            
+        
+
+        marker_6e423abfb4f09ea977f97916352d7dcf.bindPopup(popup_8b63332de808d002dcff38cff798d293)
+        ;
+
+        
+    
+    
+            marker_6e423abfb4f09ea977f97916352d7dcf.bindTooltip(
+                `<div>
+                     pk_sindh_058 - Sialkot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6e423abfb4f09ea977f97916352d7dcf.setIcon(icon_bbd8bd17349cf67e59756825f059dad8);
+            
+    
+            var marker_0e9dab889dead7ccf9580dec05098bc9 = L.marker(
+                [34.805837, 72.915702],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_1e50cff21c95c80bcf0efc7690e4ef61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f02aa6d11a5a70cf1efb6c87d1d1225f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_095cd53108b6e93119df69f4fdddc4c7 = $(`<div id="html_095cd53108b6e93119df69f4fdddc4c7" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_059<br>             <b>Location:</b> Sialkot<br>             <b>River:</b> Shyok<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 34.8058, 72.9157             </div>`)[0];
+                popup_f02aa6d11a5a70cf1efb6c87d1d1225f.setContent(html_095cd53108b6e93119df69f4fdddc4c7);
+            
+        
+
+        marker_0e9dab889dead7ccf9580dec05098bc9.bindPopup(popup_f02aa6d11a5a70cf1efb6c87d1d1225f)
+        ;
+
+        
+    
+    
+            marker_0e9dab889dead7ccf9580dec05098bc9.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_059 - Sialkot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e9dab889dead7ccf9580dec05098bc9.setIcon(icon_1e50cff21c95c80bcf0efc7690e4ef61);
+            
+    
+            var marker_5c04b2a8e162c924664912b629567d89 = L.marker(
+                [35.418655, 75.668571],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_aeba994f4a65477ab127cb47539cfeb6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b76124de012e485bb87c51bef5cd3dde = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fc5e7dbb1718dc52702604a961f3b48c = $(`<div id="html_fc5e7dbb1718dc52702604a961f3b48c" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_060<br>             <b>Location:</b> Sialkot<br>             <b>River:</b> Chitral<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 35.4187, 75.6686             </div>`)[0];
+                popup_b76124de012e485bb87c51bef5cd3dde.setContent(html_fc5e7dbb1718dc52702604a961f3b48c);
+            
+        
+
+        marker_5c04b2a8e162c924664912b629567d89.bindPopup(popup_b76124de012e485bb87c51bef5cd3dde)
+        ;
+
+        
+    
+    
+            marker_5c04b2a8e162c924664912b629567d89.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_060 - Sialkot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c04b2a8e162c924664912b629567d89.setIcon(icon_aeba994f4a65477ab127cb47539cfeb6);
+            
+    
+            var marker_dd6feaf0994505cc531832ccdb18d2d0 = L.marker(
+                [35.780084, 74.665508],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_da90f585c725e828af0167e171f490b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1116b3656c58e804c1e0d979fba4d456 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf9716f1159c41d62c00bf356d66688c = $(`<div id="html_cf9716f1159c41d62c00bf356d66688c" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_061<br>             <b>Location:</b> Mardan<br>             <b>River:</b> Sutlej<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.7801, 74.6655             </div>`)[0];
+                popup_1116b3656c58e804c1e0d979fba4d456.setContent(html_cf9716f1159c41d62c00bf356d66688c);
+            
+        
+
+        marker_dd6feaf0994505cc531832ccdb18d2d0.bindPopup(popup_1116b3656c58e804c1e0d979fba4d456)
+        ;
+
+        
+    
+    
+            marker_dd6feaf0994505cc531832ccdb18d2d0.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_061 - Mardan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd6feaf0994505cc531832ccdb18d2d0.setIcon(icon_da90f585c725e828af0167e171f490b7);
+            
+    
+            var marker_8e9f8842f5534775f3835d88046e50a7 = L.marker(
+                [30.941697, 72.604872],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_f412a58d607908fbc525be61a9e7f74e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ee05fe4c9b6e61d3950472f1c7ececa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_808df33f251e6d8c62b2215259a1091f = $(`<div id="html_808df33f251e6d8c62b2215259a1091f" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_062<br>             <b>Location:</b> Tarbela<br>             <b>River:</b> Kuram<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 30.9417, 72.6049             </div>`)[0];
+                popup_4ee05fe4c9b6e61d3950472f1c7ececa.setContent(html_808df33f251e6d8c62b2215259a1091f);
+            
+        
+
+        marker_8e9f8842f5534775f3835d88046e50a7.bindPopup(popup_4ee05fe4c9b6e61d3950472f1c7ececa)
+        ;
+
+        
+    
+    
+            marker_8e9f8842f5534775f3835d88046e50a7.bindTooltip(
+                `<div>
+                     pk_punjab_062 - Tarbela
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8e9f8842f5534775f3835d88046e50a7.setIcon(icon_f412a58d607908fbc525be61a9e7f74e);
+            
+    
+            var marker_b1f411528fb74f45692d671d8833b23e = L.marker(
+                [35.179513, 72.505406],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_a416ff36732f47bb2fb849b436eda09c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c809ec79350b78c8dc049bfef5a7acfc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8931559d159d4f3fdea99f758775ae63 = $(`<div id="html_8931559d159d4f3fdea99f758775ae63" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_063<br>             <b>Location:</b> Larkana<br>             <b>River:</b> Shyok<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 35.1795, 72.5054             </div>`)[0];
+                popup_c809ec79350b78c8dc049bfef5a7acfc.setContent(html_8931559d159d4f3fdea99f758775ae63);
+            
+        
+
+        marker_b1f411528fb74f45692d671d8833b23e.bindPopup(popup_c809ec79350b78c8dc049bfef5a7acfc)
+        ;
+
+        
+    
+    
+            marker_b1f411528fb74f45692d671d8833b23e.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_063 - Larkana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b1f411528fb74f45692d671d8833b23e.setIcon(icon_a416ff36732f47bb2fb849b436eda09c);
+            
+    
+            var marker_d0ba85e5d641928076a9881a87c4156c = L.marker(
+                [35.645042, 74.509104],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_4e92f4dfae8eeb5d5419354e5908f6ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_67093f36cd5235664ebfb130411a9dee = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ec0eda7a3f54367427e85c3d950009c3 = $(`<div id="html_ec0eda7a3f54367427e85c3d950009c3" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_gilgit-baltistan_064<br>             <b>Location:</b> Multan<br>             <b>River:</b> Kuram<br>             <b>Province:</b> Unknown<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 35.6450, 74.5091             </div>`)[0];
+                popup_67093f36cd5235664ebfb130411a9dee.setContent(html_ec0eda7a3f54367427e85c3d950009c3);
+            
+        
+
+        marker_d0ba85e5d641928076a9881a87c4156c.bindPopup(popup_67093f36cd5235664ebfb130411a9dee)
+        ;
+
+        
+    
+    
+            marker_d0ba85e5d641928076a9881a87c4156c.bindTooltip(
+                `<div>
+                     pk_gilgit-baltistan_064 - Multan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d0ba85e5d641928076a9881a87c4156c.setIcon(icon_4e92f4dfae8eeb5d5419354e5908f6ce);
+            
+    
+            var marker_4556fd9311b93a767fe0f58cf930fd7f = L.marker(
+                [30.772571, 69.815261],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_062d22a2877c48e637e38fcddbdd6e91 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4827e8fb1004ec370c4e43b942d029ff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_755a5d135d24e8fac3433c0bf48bb4b8 = $(`<div id="html_755a5d135d24e8fac3433c0bf48bb4b8" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_065<br>             <b>Location:</b> Sialkot<br>             <b>River:</b> Shah Alam<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 30.7726, 69.8153             </div>`)[0];
+                popup_4827e8fb1004ec370c4e43b942d029ff.setContent(html_755a5d135d24e8fac3433c0bf48bb4b8);
+            
+        
+
+        marker_4556fd9311b93a767fe0f58cf930fd7f.bindPopup(popup_4827e8fb1004ec370c4e43b942d029ff)
+        ;
+
+        
+    
+    
+            marker_4556fd9311b93a767fe0f58cf930fd7f.bindTooltip(
+                `<div>
+                     pk_punjab_065 - Sialkot
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4556fd9311b93a767fe0f58cf930fd7f.setIcon(icon_062d22a2877c48e637e38fcddbdd6e91);
+            
+    
+            var marker_a7c358bef8974cfda60c3c04a778bdca = L.marker(
+                [34.935939, 71.975571],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_183e726a68c90be6d55b0fb966727210 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6a45a58b2fa81f0462f8f59d001c62b4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e87b0e3aa0d4d08c22617a746f668335 = $(`<div id="html_e87b0e3aa0d4d08c22617a746f668335" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_066<br>             <b>Location:</b> Sukkur<br>             <b>River:</b> Kurram<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 34.9359, 71.9756             </div>`)[0];
+                popup_6a45a58b2fa81f0462f8f59d001c62b4.setContent(html_e87b0e3aa0d4d08c22617a746f668335);
+            
+        
+
+        marker_a7c358bef8974cfda60c3c04a778bdca.bindPopup(popup_6a45a58b2fa81f0462f8f59d001c62b4)
+        ;
+
+        
+    
+    
+            marker_a7c358bef8974cfda60c3c04a778bdca.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_066 - Sukkur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a7c358bef8974cfda60c3c04a778bdca.setIcon(icon_183e726a68c90be6d55b0fb966727210);
+            
+    
+            var marker_8fc7f322e12b626a1040d9eb040b437f = L.marker(
+                [34.31375, 72.403558],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_621762bd6f1fac37af6812f7ef09006c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7eb024befa92b664f1b0acf03df97ff6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8cd1dba7ad16fc85eb372c32ccc7507c = $(`<div id="html_8cd1dba7ad16fc85eb372c32ccc7507c" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_067<br>             <b>Location:</b> Kalabagh<br>             <b>River:</b> Shyok<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 34.3137, 72.4036             </div>`)[0];
+                popup_7eb024befa92b664f1b0acf03df97ff6.setContent(html_8cd1dba7ad16fc85eb372c32ccc7507c);
+            
+        
+
+        marker_8fc7f322e12b626a1040d9eb040b437f.bindPopup(popup_7eb024befa92b664f1b0acf03df97ff6)
+        ;
+
+        
+    
+    
+            marker_8fc7f322e12b626a1040d9eb040b437f.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_067 - Kalabagh
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8fc7f322e12b626a1040d9eb040b437f.setIcon(icon_621762bd6f1fac37af6812f7ef09006c);
+            
+    
+            var marker_1756e58aed7e7f6a397e160c4fde8199 = L.marker(
+                [25.544639, 68.238962],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_276e83990ba6b593429e117a4ea03365 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_299e4f51cbd37be00ce89543b8b54b16 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_77d16f752448b06956c9b8deeff33be0 = $(`<div id="html_77d16f752448b06956c9b8deeff33be0" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_sindh_068<br>             <b>Location:</b> Bahawalpur<br>             <b>River:</b> Gilgit<br>             <b>Province:</b> Sindh<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 25.5446, 68.2390             </div>`)[0];
+                popup_299e4f51cbd37be00ce89543b8b54b16.setContent(html_77d16f752448b06956c9b8deeff33be0);
+            
+        
+
+        marker_1756e58aed7e7f6a397e160c4fde8199.bindPopup(popup_299e4f51cbd37be00ce89543b8b54b16)
+        ;
+
+        
+    
+    
+            marker_1756e58aed7e7f6a397e160c4fde8199.bindTooltip(
+                `<div>
+                     pk_sindh_068 - Bahawalpur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1756e58aed7e7f6a397e160c4fde8199.setIcon(icon_276e83990ba6b593429e117a4ea03365);
+            
+    
+            var marker_788b47079d50fea2a6b253517a09f7f3 = L.marker(
+                [28.778314, 64.902425],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_04b5b570303eb26d16036064d5374b8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "remove",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4661297f8bc4394d76f6ece22539ea57 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1b9b81c7994a9d0d059ab1f58fc94dbb = $(`<div id="html_1b9b81c7994a9d0d059ab1f58fc94dbb" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_balochistan_069<br>             <b>Location:</b> Jacobabad<br>             <b>River:</b> Gilgit<br>             <b>Province:</b> Balochistan<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 28.7783, 64.9024             </div>`)[0];
+                popup_4661297f8bc4394d76f6ece22539ea57.setContent(html_1b9b81c7994a9d0d059ab1f58fc94dbb);
+            
+        
+
+        marker_788b47079d50fea2a6b253517a09f7f3.bindPopup(popup_4661297f8bc4394d76f6ece22539ea57)
+        ;
+
+        
+    
+    
+            marker_788b47079d50fea2a6b253517a09f7f3.bindTooltip(
+                `<div>
+                     pk_balochistan_069 - Jacobabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_788b47079d50fea2a6b253517a09f7f3.setIcon(icon_04b5b570303eb26d16036064d5374b8e);
+            
+    
+            var marker_2ed797cb93b656c45e4c0bf45394fd67 = L.marker(
+                [30.646198, 69.346541],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_1bc8f692066da0456505f393a5cff556 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b6eac251f5c5089f7018418ed2fa30ec = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_82f0a41d1fbc8fcefad953ff919d2ee6 = $(`<div id="html_82f0a41d1fbc8fcefad953ff919d2ee6" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_070<br>             <b>Location:</b> Bahawalpur<br>             <b>River:</b> Sutlej<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.6462, 69.3465             </div>`)[0];
+                popup_b6eac251f5c5089f7018418ed2fa30ec.setContent(html_82f0a41d1fbc8fcefad953ff919d2ee6);
+            
+        
+
+        marker_2ed797cb93b656c45e4c0bf45394fd67.bindPopup(popup_b6eac251f5c5089f7018418ed2fa30ec)
+        ;
+
+        
+    
+    
+            marker_2ed797cb93b656c45e4c0bf45394fd67.bindTooltip(
+                `<div>
+                     pk_punjab_070 - Bahawalpur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2ed797cb93b656c45e4c0bf45394fd67.setIcon(icon_1bc8f692066da0456505f393a5cff556);
+            
+    
+            var marker_0f9332ddbb57e83000b7171d855ddf5d = L.marker(
+                [29.126987, 71.954119],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_eb61f95d04399267b9d5a2ce49298de0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb8292967454a46d9235014308f6112f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_72c522c6dd90de61a1be1999dec4fb64 = $(`<div id="html_72c522c6dd90de61a1be1999dec4fb64" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_071<br>             <b>Location:</b> Chitral<br>             <b>River:</b> Gilgit<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> SUPARCO<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 29.1270, 71.9541             </div>`)[0];
+                popup_bb8292967454a46d9235014308f6112f.setContent(html_72c522c6dd90de61a1be1999dec4fb64);
+            
+        
+
+        marker_0f9332ddbb57e83000b7171d855ddf5d.bindPopup(popup_bb8292967454a46d9235014308f6112f)
+        ;
+
+        
+    
+    
+            marker_0f9332ddbb57e83000b7171d855ddf5d.bindTooltip(
+                `<div>
+                     pk_punjab_071 - Chitral
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0f9332ddbb57e83000b7171d855ddf5d.setIcon(icon_eb61f95d04399267b9d5a2ce49298de0);
+            
+    
+            var marker_146c2ce64e81e8a8786c14a43737ed4c = L.marker(
+                [34.379945, 72.872356],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_498653ebeadfc31df89ce4056a5c0705 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "ok",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b58141883941fbf310a9e73cbe75a47b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1214a76dedeb96933883787201263239 = $(`<div id="html_1214a76dedeb96933883787201263239" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_072<br>             <b>Location:</b> Attock<br>             <b>River:</b> Chenab<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> WAPDA<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> No<br>             <b>Coordinates:</b> 34.3799, 72.8724             </div>`)[0];
+                popup_b58141883941fbf310a9e73cbe75a47b.setContent(html_1214a76dedeb96933883787201263239);
+            
+        
+
+        marker_146c2ce64e81e8a8786c14a43737ed4c.bindPopup(popup_b58141883941fbf310a9e73cbe75a47b)
+        ;
+
+        
+    
+    
+            marker_146c2ce64e81e8a8786c14a43737ed4c.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_072 - Attock
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_146c2ce64e81e8a8786c14a43737ed4c.setIcon(icon_498653ebeadfc31df89ce4056a5c0705);
+            
+    
+            var marker_c54a539207f14b66fb72b20560425c19 = L.marker(
+                [33.729342, 73.078932],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_5cb4d858792210c67e0d52f9da158df9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58c9975b4481b92bf05ebf973ec47cab = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_be6bbd8b5eab3c41b7819efe2d3b22b8 = $(`<div id="html_be6bbd8b5eab3c41b7819efe2d3b22b8" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_khyber_pakhtunkhwa_073<br>             <b>Location:</b> Bahawalpur<br>             <b>River:</b> Gilgit<br>             <b>Province:</b> Khyber Pakhtunkhwa<br>             <b>Source:</b> PMD<br>             <b>Quality Verified:</b> Yes<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 33.7293, 73.0789             </div>`)[0];
+                popup_58c9975b4481b92bf05ebf973ec47cab.setContent(html_be6bbd8b5eab3c41b7819efe2d3b22b8);
+            
+        
+
+        marker_c54a539207f14b66fb72b20560425c19.bindPopup(popup_58c9975b4481b92bf05ebf973ec47cab)
+        ;
+
+        
+    
+    
+            marker_c54a539207f14b66fb72b20560425c19.bindTooltip(
+                `<div>
+                     pk_khyber_pakhtunkhwa_073 - Bahawalpur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c54a539207f14b66fb72b20560425c19.setIcon(icon_5cb4d858792210c67e0d52f9da158df9);
+            
+    
+            var marker_deefdd9e9566995954029e46241f8207 = L.marker(
+                [30.846635, 72.806947],
+                {
+}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+            var icon_642aa8dcb24ed1771bcac183695ca7fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc82434653e72246f6ce1d68d247776e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_11a087c000c8e38c748027e4bbc7b1cd = $(`<div id="html_11a087c000c8e38c748027e4bbc7b1cd" style="width: 100.0%; height: 100.0%;">             <b>Gauge ID:</b> pk_punjab_074<br>             <b>Location:</b> Chitral<br>             <b>River:</b> Sutlej<br>             <b>Province:</b> Punjab<br>             <b>Source:</b> HYBAS<br>             <b>Quality Verified:</b> No<br>             <b>Has Model:</b> Yes<br>             <b>Coordinates:</b> 30.8466, 72.8069             </div>`)[0];
+                popup_dc82434653e72246f6ce1d68d247776e.setContent(html_11a087c000c8e38c748027e4bbc7b1cd);
+            
+        
+
+        marker_deefdd9e9566995954029e46241f8207.bindPopup(popup_dc82434653e72246f6ce1d68d247776e)
+        ;
+
+        
+    
+    
+            marker_deefdd9e9566995954029e46241f8207.bindTooltip(
+                `<div>
+                     pk_punjab_074 - Chitral
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_deefdd9e9566995954029e46241f8207.setIcon(icon_642aa8dcb24ed1771bcac183695ca7fe);
+            
+    
+            var rectangle_4a918f817ea2d2e23090fad507f7f66e = L.rectangle(
+                [[27.7, 69.3], [33.0, 75.4]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+        var popup_cfae060b7ce7a150500100b9137a34a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5db279815dfaa2101bb077362c312bb1 = $(`<div id="html_5db279815dfaa2101bb077362c312bb1" style="width: 100.0%; height: 100.0%;">Punjab</div>`)[0];
+                popup_cfae060b7ce7a150500100b9137a34a6.setContent(html_5db279815dfaa2101bb077362c312bb1);
+            
+        
+
+        rectangle_4a918f817ea2d2e23090fad507f7f66e.bindPopup(popup_cfae060b7ce7a150500100b9137a34a6)
+        ;
+
+        
+    
+    
+            rectangle_4a918f817ea2d2e23090fad507f7f66e.bindTooltip(
+                `<div>
+                     Punjab
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_632ef5ebf0c716788b7f7088773cecb8 = L.rectangle(
+                [[23.5, 66.5], [28.5, 71.1]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+        var popup_7ed8dc67b4e22f020cdae8965838402e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04952b3faab90b18bfd83f4a65a66f48 = $(`<div id="html_04952b3faab90b18bfd83f4a65a66f48" style="width: 100.0%; height: 100.0%;">Sindh</div>`)[0];
+                popup_7ed8dc67b4e22f020cdae8965838402e.setContent(html_04952b3faab90b18bfd83f4a65a66f48);
+            
+        
+
+        rectangle_632ef5ebf0c716788b7f7088773cecb8.bindPopup(popup_7ed8dc67b4e22f020cdae8965838402e)
+        ;
+
+        
+    
+    
+            rectangle_632ef5ebf0c716788b7f7088773cecb8.bindTooltip(
+                `<div>
+                     Sindh
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_7378ef23e8e8d2749aa432c12f2194bf = L.rectangle(
+                [[31.0, 69.2], [36.0, 74.0]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+        var popup_00509257e4c44fb08e6562483fdeac8c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7fc4dfef143810e40310c0f7afb39f62 = $(`<div id="html_7fc4dfef143810e40310c0f7afb39f62" style="width: 100.0%; height: 100.0%;">Khyber Pakhtunkhwa</div>`)[0];
+                popup_00509257e4c44fb08e6562483fdeac8c.setContent(html_7fc4dfef143810e40310c0f7afb39f62);
+            
+        
+
+        rectangle_7378ef23e8e8d2749aa432c12f2194bf.bindPopup(popup_00509257e4c44fb08e6562483fdeac8c)
+        ;
+
+        
+    
+    
+            rectangle_7378ef23e8e8d2749aa432c12f2194bf.bindTooltip(
+                `<div>
+                     Khyber Pakhtunkhwa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_8b9d2f085fd8705943cfb55992948585 = L.rectangle(
+                [[24.5, 60.5], [32.5, 70.3]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+        var popup_889f98eac36a30e31c7d2335937826f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e747712a3711ea62661aaa1760530ac0 = $(`<div id="html_e747712a3711ea62661aaa1760530ac0" style="width: 100.0%; height: 100.0%;">Balochistan</div>`)[0];
+                popup_889f98eac36a30e31c7d2335937826f1.setContent(html_e747712a3711ea62661aaa1760530ac0);
+            
+        
+
+        rectangle_8b9d2f085fd8705943cfb55992948585.bindPopup(popup_889f98eac36a30e31c7d2335937826f1)
+        ;
+
+        
+    
+    
+            rectangle_8b9d2f085fd8705943cfb55992948585.bindTooltip(
+                `<div>
+                     Balochistan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var rectangle_fcec997727d5b30b80ab65b402aa5a1c = L.rectangle(
+                [[34.5, 72.5], [37.0, 77.0]],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "gray", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_9c9878a138101491484fba4b659960d0);
+        
+    
+        var popup_9fdd8225e3db0c6bc6b6d603ff6b5876 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4586765f255299cf1a69665575b6bb39 = $(`<div id="html_4586765f255299cf1a69665575b6bb39" style="width: 100.0%; height: 100.0%;">Gilgit-Baltistan</div>`)[0];
+                popup_9fdd8225e3db0c6bc6b6d603ff6b5876.setContent(html_4586765f255299cf1a69665575b6bb39);
+            
+        
+
+        rectangle_fcec997727d5b30b80ab65b402aa5a1c.bindPopup(popup_9fdd8225e3db0c6bc6b6d603ff6b5876)
+        ;
+
+        
+    
+    
+            rectangle_fcec997727d5b30b80ab65b402aa5a1c.bindTooltip(
+                `<div>
+                     Gilgit-Baltistan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

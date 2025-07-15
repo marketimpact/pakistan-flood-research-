@@ -1,0 +1,76 @@
+gaugeId,latitude,longitude,river,siteName,qualityVerified,hasModel,source,countryCode,province,query_timestamp
+pk_gilgit-baltistan_000,35.655266,75.112828,Shyok,Sialkot,False,True,PMD,PK,Unknown,2025-06-20T11:43:46.397767
+pk_gilgit-baltistan_001,35.609177,76.281421,,Sukkur,False,True,PMD,PK,Unknown,2025-06-20T11:43:46.397778
+pk_gilgit-baltistan_002,35.623145,75.873508,Chenab,Chashma,True,True,WAPDA,PK,Unknown,2025-06-20T11:43:46.397781
+pk_punjab_003,29.998805,69.421147,Chitral,Attock,True,True,HYBAS,PK,Punjab,2025-06-20T11:43:46.397783
+pk_sindh_004,25.683272,68.070765,Chenab,Multan,False,True,SUPARCO,PK,Sindh,2025-06-20T11:43:46.397784
+pk_khyber_pakhtunkhwa_005,35.559501,72.285072,Kabul,Gujranwala,False,True,WAPDA,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397786
+pk_sindh_006,27.107374,67.210742,,Gujranwala,True,False,HYBAS,PK,Sindh,2025-06-20T11:43:46.397788
+pk_sindh_007,25.728469,68.389743,Kurram,Multan,False,False,PMD,PK,Sindh,2025-06-20T11:43:46.397790
+pk_punjab_008,30.189249,69.59828,Hunza,Skardu,True,True,PMD,PK,Punjab,2025-06-20T11:43:46.397791
+pk_gilgit-baltistan_009,34.703013,75.370002,Chenab,Mardan,False,True,PMD,PK,Unknown,2025-06-20T11:43:46.397793
+pk_khyber_pakhtunkhwa_010,35.210299,72.750909,Indus,Multan,True,True,PMD,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397795
+pk_khyber_pakhtunkhwa_011,33.62284,71.706804,Sutlej,Sukkur,True,True,WAPDA,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397796
+pk_punjab_012,30.832944,69.34715,Kuram,Tarbela,False,False,HYBAS,PK,Punjab,2025-06-20T11:43:46.397798
+pk_balochistan_013,29.87835,67.252489,Indus,Multan,False,False,HYBAS,PK,Balochistan,2025-06-20T11:43:46.397799
+pk_gilgit-baltistan_014,35.482487,75.30572,Shah Alam,Hyderabad,False,False,PMD,PK,Unknown,2025-06-20T11:43:46.397801
+pk_sindh_015,27.412439,67.581533,Swat,Gujranwala,True,True,WAPDA,PK,Sindh,2025-06-20T11:43:46.397802
+pk_balochistan_016,30.266806,67.16,,Hyderabad,True,True,SUPARCO,PK,Balochistan,2025-06-20T11:43:46.397804
+pk_balochistan_017,28.239944,64.951101,Sutlej,Mardan,True,False,SUPARCO,PK,Balochistan,2025-06-20T11:43:46.397806
+pk_punjab_018,30.172714,69.802962,,Sialkot,False,True,PMD,PK,Punjab,2025-06-20T11:43:46.397807
+pk_punjab_019,31.567536,72.300212,Kurram,Sialkot,True,False,PMD,PK,Punjab,2025-06-20T11:43:46.397809
+pk_khyber_pakhtunkhwa_020,34.175706,72.483144,Indus,Multan,True,True,WAPDA,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397810
+pk_sindh_021,26.88766,67.329346,Chitral,Sialkot,True,True,PMD,PK,Sindh,2025-06-20T11:43:46.397812
+pk_gilgit-baltistan_022,36.225962,73.922523,Chitral,Attock,True,True,PMD,PK,Unknown,2025-06-20T11:43:46.397813
+pk_khyber_pakhtunkhwa_023,33.977609,71.186121,Shah Alam,Nowshera,True,True,HYBAS,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397815
+pk_balochistan_024,29.850584,67.336774,Jhelum,Kalabagh,False,False,WAPDA,PK,Balochistan,2025-06-20T11:43:46.397816
+pk_gilgit-baltistan_025,34.697393,75.082967,Swat,Nowshera,True,True,HYBAS,PK,Unknown,2025-06-20T11:43:46.397818
+pk_balochistan_026,30.274256,67.317926,Chitral,Mangla,True,True,SUPARCO,PK,Balochistan,2025-06-20T11:43:46.397829
+pk_sindh_027,25.419039,68.443615,Swat,Mangla,True,True,SUPARCO,PK,Sindh,2025-06-20T11:43:46.397831
+pk_khyber_pakhtunkhwa_028,34.486808,72.624603,Chitral,Hyderabad,True,False,PMD,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397832
+pk_sindh_029,26.749241,67.022788,Chitral,Multan,True,True,PMD,PK,Sindh,2025-06-20T11:43:46.397834
+pk_gilgit-baltistan_030,35.752603,74.290889,Ravi,Jacobabad,True,True,SUPARCO,PK,Unknown,2025-06-20T11:43:46.397835
+pk_gilgit-baltistan_031,35.968614,73.853755,,Kotri,True,True,WAPDA,PK,Unknown,2025-06-20T11:43:46.397837
+pk_balochistan_032,30.260115,67.210826,Chitral,Skardu,True,True,SUPARCO,PK,Balochistan,2025-06-20T11:43:46.397838
+pk_punjab_033,30.857834,69.325704,Kurram,Sialkot,False,True,HYBAS,PK,Punjab,2025-06-20T11:43:46.397840
+pk_balochistan_034,30.046363,67.038264,Gilgit,Sukkur,True,False,WAPDA,PK,Balochistan,2025-06-20T11:43:46.397841
+pk_khyber_pakhtunkhwa_035,33.926011,73.166107,,Mardan,False,False,PMD,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397843
+pk_khyber_pakhtunkhwa_036,34.120335,72.022537,Kabul,Gilgit,False,True,SUPARCO,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397845
+pk_punjab_037,29.975899,68.932597,,Mangla,True,False,WAPDA,PK,Punjab,2025-06-20T11:43:46.397846
+pk_punjab_038,29.971051,69.173078,,Kotri,True,False,WAPDA,PK,Punjab,2025-06-20T11:43:46.397847
+pk_gilgit-baltistan_039,35.866753,74.425463,Swat,Hyderabad,True,True,WAPDA,PK,Unknown,2025-06-20T11:43:46.397849
+pk_khyber_pakhtunkhwa_040,33.676394,72.965922,Shyok,Gujranwala,False,False,HYBAS,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397851
+pk_khyber_pakhtunkhwa_041,35.370342,72.25678,Swat,Tarbela,True,True,WAPDA,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397852
+pk_balochistan_042,30.303117,66.661249,Gilgit,Skardu,True,True,WAPDA,PK,Balochistan,2025-06-20T11:43:46.397854
+pk_balochistan_043,29.989101,67.449494,Kurram,Sukkur,False,True,WAPDA,PK,Balochistan,2025-06-20T11:43:46.397855
+pk_sindh_044,25.532926,68.971296,Kabul,Sukkur,True,True,WAPDA,PK,Sindh,2025-06-20T11:43:46.397857
+pk_gilgit-baltistan_045,34.70075,75.621911,Ravi,Skardu,False,True,HYBAS,PK,Unknown,2025-06-20T11:43:46.397858
+pk_punjab_046,30.000944,69.412876,,Gujranwala,True,True,SUPARCO,PK,Punjab,2025-06-20T11:43:46.397860
+pk_khyber_pakhtunkhwa_047,35.397728,72.168605,Chenab,Kotri,True,False,HYBAS,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397861
+pk_balochistan_048,30.105204,67.363836,,Mangla,True,True,PMD,PK,Balochistan,2025-06-20T11:43:46.397863
+pk_gilgit-baltistan_049,34.839521,75.823607,Kabul,Nowshera,True,False,HYBAS,PK,Unknown,2025-06-20T11:43:46.397864
+pk_sindh_050,26.297593,68.872228,Sutlej,Hyderabad,True,False,HYBAS,PK,Sindh,2025-06-20T11:43:46.397866
+pk_khyber_pakhtunkhwa_051,35.611301,72.639571,,Mangla,True,True,PMD,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397867
+pk_sindh_052,26.881307,66.969151,Indus,Tarbela,True,False,PMD,PK,Sindh,2025-06-20T11:43:46.397869
+pk_punjab_053,30.632126,69.319753,Ravi,Larkana,True,True,HYBAS,PK,Punjab,2025-06-20T11:43:46.397870
+pk_gilgit-baltistan_054,35.500933,75.653945,Shyok,Mangla,True,False,WAPDA,PK,Unknown,2025-06-20T11:43:46.397872
+pk_khyber_pakhtunkhwa_055,34.135653,71.995596,Chitral,Gilgit,False,True,HYBAS,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397873
+pk_khyber_pakhtunkhwa_056,35.463127,72.463389,Ravi,Nowshera,True,True,HYBAS,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397875
+pk_balochistan_057,29.804372,66.979818,Chitral,Bahawalpur,True,True,SUPARCO,PK,Balochistan,2025-06-20T11:43:46.397876
+pk_sindh_058,26.666879,67.543951,Shah Alam,Sialkot,False,True,PMD,PK,Sindh,2025-06-20T11:43:46.397878
+pk_khyber_pakhtunkhwa_059,34.805837,72.915702,Shyok,Sialkot,False,True,SUPARCO,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397879
+pk_gilgit-baltistan_060,35.418655,75.668571,Chitral,Sialkot,False,False,SUPARCO,PK,Unknown,2025-06-20T11:43:46.397881
+pk_gilgit-baltistan_061,35.780084,74.665508,Sutlej,Mardan,False,True,WAPDA,PK,Unknown,2025-06-20T11:43:46.397883
+pk_punjab_062,30.941697,72.604872,Kuram,Tarbela,True,False,PMD,PK,Punjab,2025-06-20T11:43:46.397884
+pk_khyber_pakhtunkhwa_063,35.179513,72.505406,Shyok,Larkana,True,False,WAPDA,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397885
+pk_gilgit-baltistan_064,35.645042,74.509104,Kuram,Multan,True,True,WAPDA,PK,Unknown,2025-06-20T11:43:46.397887
+pk_punjab_065,30.772571,69.815261,Shah Alam,Sialkot,True,False,HYBAS,PK,Punjab,2025-06-20T11:43:46.397889
+pk_khyber_pakhtunkhwa_066,34.935939,71.975571,Kurram,Sukkur,True,True,SUPARCO,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397891
+pk_khyber_pakhtunkhwa_067,34.31375,72.403558,Shyok,Kalabagh,True,False,WAPDA,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397893
+pk_sindh_068,25.544639,68.238962,Gilgit,Bahawalpur,False,True,SUPARCO,PK,Sindh,2025-06-20T11:43:46.397894
+pk_balochistan_069,28.778314,64.902425,Gilgit,Jacobabad,False,False,PMD,PK,Balochistan,2025-06-20T11:43:46.397896
+pk_punjab_070,30.646198,69.346541,Sutlej,Bahawalpur,True,True,PMD,PK,Punjab,2025-06-20T11:43:46.397897
+pk_punjab_071,29.126987,71.954119,Gilgit,Chitral,True,True,SUPARCO,PK,Punjab,2025-06-20T11:43:46.397899
+pk_khyber_pakhtunkhwa_072,34.379945,72.872356,Chenab,Attock,True,False,WAPDA,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397900
+pk_khyber_pakhtunkhwa_073,33.729342,73.078932,Gilgit,Bahawalpur,True,True,PMD,PK,Khyber Pakhtunkhwa,2025-06-20T11:43:46.397902
+pk_punjab_074,30.846635,72.806947,Sutlej,Chitral,False,True,HYBAS,PK,Punjab,2025-06-20T11:43:46.397903

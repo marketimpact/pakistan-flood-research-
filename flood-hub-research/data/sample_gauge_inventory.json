@@ -1,0 +1,977 @@
+[
+  {
+    "gaugeId": "pk_gilgit-baltistan_000",
+    "location": {
+      "latitude": 35.655266,
+      "longitude": 75.112828
+    },
+    "siteName": "Sialkot",
+    "river": "Shyok",
+    "source": "PMD",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_001",
+    "location": {
+      "latitude": 35.609177,
+      "longitude": 76.281421
+    },
+    "siteName": "Sukkur",
+    "river": "",
+    "source": "PMD",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_002",
+    "location": {
+      "latitude": 35.623145,
+      "longitude": 75.873508
+    },
+    "siteName": "Chashma",
+    "river": "Chenab",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_003",
+    "location": {
+      "latitude": 29.998805,
+      "longitude": 69.421147
+    },
+    "siteName": "Attock",
+    "river": "Chitral",
+    "source": "HYBAS",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_004",
+    "location": {
+      "latitude": 25.683272,
+      "longitude": 68.070765
+    },
+    "siteName": "Multan",
+    "river": "Chenab",
+    "source": "SUPARCO",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_005",
+    "location": {
+      "latitude": 35.559501,
+      "longitude": 72.285072
+    },
+    "siteName": "Gujranwala",
+    "river": "Kabul",
+    "source": "WAPDA",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_006",
+    "location": {
+      "latitude": 27.107374,
+      "longitude": 67.210742
+    },
+    "siteName": "Gujranwala",
+    "river": "",
+    "source": "HYBAS",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_007",
+    "location": {
+      "latitude": 25.728469,
+      "longitude": 68.389743
+    },
+    "siteName": "Multan",
+    "river": "Kurram",
+    "source": "PMD",
+    "qualityVerified": false,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_008",
+    "location": {
+      "latitude": 30.189249,
+      "longitude": 69.59828
+    },
+    "siteName": "Skardu",
+    "river": "Hunza",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_009",
+    "location": {
+      "latitude": 34.703013,
+      "longitude": 75.370002
+    },
+    "siteName": "Mardan",
+    "river": "Chenab",
+    "source": "PMD",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_010",
+    "location": {
+      "latitude": 35.210299,
+      "longitude": 72.750909
+    },
+    "siteName": "Multan",
+    "river": "Indus",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_011",
+    "location": {
+      "latitude": 33.62284,
+      "longitude": 71.706804
+    },
+    "siteName": "Sukkur",
+    "river": "Sutlej",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_012",
+    "location": {
+      "latitude": 30.832944,
+      "longitude": 69.34715
+    },
+    "siteName": "Tarbela",
+    "river": "Kuram",
+    "source": "HYBAS",
+    "qualityVerified": false,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_013",
+    "location": {
+      "latitude": 29.87835,
+      "longitude": 67.252489
+    },
+    "siteName": "Multan",
+    "river": "Indus",
+    "source": "HYBAS",
+    "qualityVerified": false,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_014",
+    "location": {
+      "latitude": 35.482487,
+      "longitude": 75.30572
+    },
+    "siteName": "Hyderabad",
+    "river": "Shah Alam",
+    "source": "PMD",
+    "qualityVerified": false,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_015",
+    "location": {
+      "latitude": 27.412439,
+      "longitude": 67.581533
+    },
+    "siteName": "Gujranwala",
+    "river": "Swat",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_016",
+    "location": {
+      "latitude": 30.266806,
+      "longitude": 67.16
+    },
+    "siteName": "Hyderabad",
+    "river": "",
+    "source": "SUPARCO",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_017",
+    "location": {
+      "latitude": 28.239944,
+      "longitude": 64.951101
+    },
+    "siteName": "Mardan",
+    "river": "Sutlej",
+    "source": "SUPARCO",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_018",
+    "location": {
+      "latitude": 30.172714,
+      "longitude": 69.802962
+    },
+    "siteName": "Sialkot",
+    "river": "",
+    "source": "PMD",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_019",
+    "location": {
+      "latitude": 31.567536,
+      "longitude": 72.300212
+    },
+    "siteName": "Sialkot",
+    "river": "Kurram",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_020",
+    "location": {
+      "latitude": 34.175706,
+      "longitude": 72.483144
+    },
+    "siteName": "Multan",
+    "river": "Indus",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_021",
+    "location": {
+      "latitude": 26.88766,
+      "longitude": 67.329346
+    },
+    "siteName": "Sialkot",
+    "river": "Chitral",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_022",
+    "location": {
+      "latitude": 36.225962,
+      "longitude": 73.922523
+    },
+    "siteName": "Attock",
+    "river": "Chitral",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_023",
+    "location": {
+      "latitude": 33.977609,
+      "longitude": 71.186121
+    },
+    "siteName": "Nowshera",
+    "river": "Shah Alam",
+    "source": "HYBAS",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_024",
+    "location": {
+      "latitude": 29.850584,
+      "longitude": 67.336774
+    },
+    "siteName": "Kalabagh",
+    "river": "Jhelum",
+    "source": "WAPDA",
+    "qualityVerified": false,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_025",
+    "location": {
+      "latitude": 34.697393,
+      "longitude": 75.082967
+    },
+    "siteName": "Nowshera",
+    "river": "Swat",
+    "source": "HYBAS",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_026",
+    "location": {
+      "latitude": 30.274256,
+      "longitude": 67.317926
+    },
+    "siteName": "Mangla",
+    "river": "Chitral",
+    "source": "SUPARCO",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_027",
+    "location": {
+      "latitude": 25.419039,
+      "longitude": 68.443615
+    },
+    "siteName": "Mangla",
+    "river": "Swat",
+    "source": "SUPARCO",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_028",
+    "location": {
+      "latitude": 34.486808,
+      "longitude": 72.624603
+    },
+    "siteName": "Hyderabad",
+    "river": "Chitral",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_029",
+    "location": {
+      "latitude": 26.749241,
+      "longitude": 67.022788
+    },
+    "siteName": "Multan",
+    "river": "Chitral",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_030",
+    "location": {
+      "latitude": 35.752603,
+      "longitude": 74.290889
+    },
+    "siteName": "Jacobabad",
+    "river": "Ravi",
+    "source": "SUPARCO",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_031",
+    "location": {
+      "latitude": 35.968614,
+      "longitude": 73.853755
+    },
+    "siteName": "Kotri",
+    "river": "",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_032",
+    "location": {
+      "latitude": 30.260115,
+      "longitude": 67.210826
+    },
+    "siteName": "Skardu",
+    "river": "Chitral",
+    "source": "SUPARCO",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_033",
+    "location": {
+      "latitude": 30.857834,
+      "longitude": 69.325704
+    },
+    "siteName": "Sialkot",
+    "river": "Kurram",
+    "source": "HYBAS",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_034",
+    "location": {
+      "latitude": 30.046363,
+      "longitude": 67.038264
+    },
+    "siteName": "Sukkur",
+    "river": "Gilgit",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_035",
+    "location": {
+      "latitude": 33.926011,
+      "longitude": 73.166107
+    },
+    "siteName": "Mardan",
+    "river": "",
+    "source": "PMD",
+    "qualityVerified": false,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_036",
+    "location": {
+      "latitude": 34.120335,
+      "longitude": 72.022537
+    },
+    "siteName": "Gilgit",
+    "river": "Kabul",
+    "source": "SUPARCO",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_037",
+    "location": {
+      "latitude": 29.975899,
+      "longitude": 68.932597
+    },
+    "siteName": "Mangla",
+    "river": "",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_038",
+    "location": {
+      "latitude": 29.971051,
+      "longitude": 69.173078
+    },
+    "siteName": "Kotri",
+    "river": "",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_039",
+    "location": {
+      "latitude": 35.866753,
+      "longitude": 74.425463
+    },
+    "siteName": "Hyderabad",
+    "river": "Swat",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_040",
+    "location": {
+      "latitude": 33.676394,
+      "longitude": 72.965922
+    },
+    "siteName": "Gujranwala",
+    "river": "Shyok",
+    "source": "HYBAS",
+    "qualityVerified": false,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_041",
+    "location": {
+      "latitude": 35.370342,
+      "longitude": 72.25678
+    },
+    "siteName": "Tarbela",
+    "river": "Swat",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_042",
+    "location": {
+      "latitude": 30.303117,
+      "longitude": 66.661249
+    },
+    "siteName": "Skardu",
+    "river": "Gilgit",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_043",
+    "location": {
+      "latitude": 29.989101,
+      "longitude": 67.449494
+    },
+    "siteName": "Sukkur",
+    "river": "Kurram",
+    "source": "WAPDA",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_044",
+    "location": {
+      "latitude": 25.532926,
+      "longitude": 68.971296
+    },
+    "siteName": "Sukkur",
+    "river": "Kabul",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_045",
+    "location": {
+      "latitude": 34.70075,
+      "longitude": 75.621911
+    },
+    "siteName": "Skardu",
+    "river": "Ravi",
+    "source": "HYBAS",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_046",
+    "location": {
+      "latitude": 30.000944,
+      "longitude": 69.412876
+    },
+    "siteName": "Gujranwala",
+    "river": "",
+    "source": "SUPARCO",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_047",
+    "location": {
+      "latitude": 35.397728,
+      "longitude": 72.168605
+    },
+    "siteName": "Kotri",
+    "river": "Chenab",
+    "source": "HYBAS",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_048",
+    "location": {
+      "latitude": 30.105204,
+      "longitude": 67.363836
+    },
+    "siteName": "Mangla",
+    "river": "",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_049",
+    "location": {
+      "latitude": 34.839521,
+      "longitude": 75.823607
+    },
+    "siteName": "Nowshera",
+    "river": "Kabul",
+    "source": "HYBAS",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_050",
+    "location": {
+      "latitude": 26.297593,
+      "longitude": 68.872228
+    },
+    "siteName": "Hyderabad",
+    "river": "Sutlej",
+    "source": "HYBAS",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_051",
+    "location": {
+      "latitude": 35.611301,
+      "longitude": 72.639571
+    },
+    "siteName": "Mangla",
+    "river": "",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_052",
+    "location": {
+      "latitude": 26.881307,
+      "longitude": 66.969151
+    },
+    "siteName": "Tarbela",
+    "river": "Indus",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_053",
+    "location": {
+      "latitude": 30.632126,
+      "longitude": 69.319753
+    },
+    "siteName": "Larkana",
+    "river": "Ravi",
+    "source": "HYBAS",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_054",
+    "location": {
+      "latitude": 35.500933,
+      "longitude": 75.653945
+    },
+    "siteName": "Mangla",
+    "river": "Shyok",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_055",
+    "location": {
+      "latitude": 34.135653,
+      "longitude": 71.995596
+    },
+    "siteName": "Gilgit",
+    "river": "Chitral",
+    "source": "HYBAS",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_056",
+    "location": {
+      "latitude": 35.463127,
+      "longitude": 72.463389
+    },
+    "siteName": "Nowshera",
+    "river": "Ravi",
+    "source": "HYBAS",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_057",
+    "location": {
+      "latitude": 29.804372,
+      "longitude": 66.979818
+    },
+    "siteName": "Bahawalpur",
+    "river": "Chitral",
+    "source": "SUPARCO",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_058",
+    "location": {
+      "latitude": 26.666879,
+      "longitude": 67.543951
+    },
+    "siteName": "Sialkot",
+    "river": "Shah Alam",
+    "source": "PMD",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_059",
+    "location": {
+      "latitude": 34.805837,
+      "longitude": 72.915702
+    },
+    "siteName": "Sialkot",
+    "river": "Shyok",
+    "source": "SUPARCO",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_060",
+    "location": {
+      "latitude": 35.418655,
+      "longitude": 75.668571
+    },
+    "siteName": "Sialkot",
+    "river": "Chitral",
+    "source": "SUPARCO",
+    "qualityVerified": false,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_061",
+    "location": {
+      "latitude": 35.780084,
+      "longitude": 74.665508
+    },
+    "siteName": "Mardan",
+    "river": "Sutlej",
+    "source": "WAPDA",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_062",
+    "location": {
+      "latitude": 30.941697,
+      "longitude": 72.604872
+    },
+    "siteName": "Tarbela",
+    "river": "Kuram",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_063",
+    "location": {
+      "latitude": 35.179513,
+      "longitude": 72.505406
+    },
+    "siteName": "Larkana",
+    "river": "Shyok",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_064",
+    "location": {
+      "latitude": 35.645042,
+      "longitude": 74.509104
+    },
+    "siteName": "Multan",
+    "river": "Kuram",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_065",
+    "location": {
+      "latitude": 30.772571,
+      "longitude": 69.815261
+    },
+    "siteName": "Sialkot",
+    "river": "Shah Alam",
+    "source": "HYBAS",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_066",
+    "location": {
+      "latitude": 34.935939,
+      "longitude": 71.975571
+    },
+    "siteName": "Sukkur",
+    "river": "Kurram",
+    "source": "SUPARCO",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_067",
+    "location": {
+      "latitude": 34.31375,
+      "longitude": 72.403558
+    },
+    "siteName": "Kalabagh",
+    "river": "Shyok",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_sindh_068",
+    "location": {
+      "latitude": 25.544639,
+      "longitude": 68.238962
+    },
+    "siteName": "Bahawalpur",
+    "river": "Gilgit",
+    "source": "SUPARCO",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_balochistan_069",
+    "location": {
+      "latitude": 28.778314,
+      "longitude": 64.902425
+    },
+    "siteName": "Jacobabad",
+    "river": "Gilgit",
+    "source": "PMD",
+    "qualityVerified": false,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_070",
+    "location": {
+      "latitude": 30.646198,
+      "longitude": 69.346541
+    },
+    "siteName": "Bahawalpur",
+    "river": "Sutlej",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_071",
+    "location": {
+      "latitude": 29.126987,
+      "longitude": 71.954119
+    },
+    "siteName": "Chitral",
+    "river": "Gilgit",
+    "source": "SUPARCO",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_072",
+    "location": {
+      "latitude": 34.379945,
+      "longitude": 72.872356
+    },
+    "siteName": "Attock",
+    "river": "Chenab",
+    "source": "WAPDA",
+    "qualityVerified": true,
+    "hasModel": false,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_073",
+    "location": {
+      "latitude": 33.729342,
+      "longitude": 73.078932
+    },
+    "siteName": "Bahawalpur",
+    "river": "Gilgit",
+    "source": "PMD",
+    "qualityVerified": true,
+    "hasModel": true,
+    "countryCode": "PK"
+  },
+  {
+    "gaugeId": "pk_punjab_074",
+    "location": {
+      "latitude": 30.846635,
+      "longitude": 72.806947
+    },
+    "siteName": "Chitral",
+    "river": "Sutlej",
+    "source": "HYBAS",
+    "qualityVerified": false,
+    "hasModel": true,
+    "countryCode": "PK"
+  }
+]

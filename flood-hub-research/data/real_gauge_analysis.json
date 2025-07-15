@@ -1,0 +1,17 @@
+{
+  "total_gauges": 1,
+  "quality_verified": 1,
+  "has_model": 1,
+  "both_quality_and_model": 1,
+  "sources": {
+    "HYBAS": 1
+  },
+  "rivers_named": 0,
+  "unique_rivers": 0,
+  "coordinate_range": {
+    "lat_min": 26.060416666665333,
+    "lat_max": 26.060416666665333,
+    "lon_min": 68.93124999999594,
+    "lon_max": 68.93124999999594
+  }
+}

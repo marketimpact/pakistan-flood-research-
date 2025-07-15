@@ -1,0 +1,282 @@
+[
+  {
+    "gaugeId": "pk_gilgit-baltistan_002",
+    "severity": "NONE",
+    "forecastTrend": "RISING",
+    "thresholds": {
+      "warningLevel": 2626.67,
+      "dangerLevel": 5059.5,
+      "extremeDangerLevel": 7466.75
+    },
+    "gaugeValueUnit": "METERS",
+    "currentLevel": 7850.79,
+    "forecastTimestamp": "2025-06-21T11:42:42.119411",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_punjab_003",
+    "severity": "MODERATE",
+    "forecastTrend": "RISING",
+    "thresholds": {
+      "warningLevel": 1198.26,
+      "dangerLevel": 4449.29,
+      "extremeDangerLevel": 8987.25
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 6179.06,
+    "forecastTimestamp": "2025-06-21T11:42:42.119422",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_sindh_006",
+    "severity": "NONE",
+    "forecastTrend": "RISING",
+    "thresholds": {
+      "warningLevel": 1722.76,
+      "dangerLevel": 4508.61,
+      "extremeDangerLevel": 8540.64
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 6405.26,
+    "forecastTimestamp": "2025-06-21T11:42:42.119426",
+    "hasInundationMap": false
+  },
+  {
+    "gaugeId": "pk_punjab_008",
+    "severity": "MODERATE",
+    "forecastTrend": "FALLING",
+    "thresholds": {
+      "warningLevel": 1056.18,
+      "dangerLevel": 3004.14,
+      "extremeDangerLevel": 6538.79
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 2777.62,
+    "forecastTimestamp": "2025-06-21T11:42:42.119429",
+    "hasInundationMap": false
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_010",
+    "severity": "NONE",
+    "forecastTrend": "FALLING",
+    "thresholds": {
+      "warningLevel": 1039.78,
+      "dangerLevel": 3547.53,
+      "extremeDangerLevel": 7147.4
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 6636.73,
+    "forecastTimestamp": "2025-06-21T11:42:42.119432",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_011",
+    "severity": "MODERATE",
+    "forecastTrend": "STABLE",
+    "thresholds": {
+      "warningLevel": 1815.3,
+      "dangerLevel": 4111.08,
+      "extremeDangerLevel": 8325.83
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 5421.91,
+    "forecastTimestamp": "2025-06-21T11:42:42.119435",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_sindh_015",
+    "severity": "MODERATE",
+    "forecastTrend": "FALLING",
+    "thresholds": {
+      "warningLevel": 2458.25,
+      "dangerLevel": 5008.14,
+      "extremeDangerLevel": 6884.52
+    },
+    "gaugeValueUnit": "METERS",
+    "currentLevel": 6731.62,
+    "forecastTimestamp": "2025-06-21T11:42:42.119438",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_balochistan_016",
+    "severity": "SEVERE",
+    "forecastTrend": "STABLE",
+    "thresholds": {
+      "warningLevel": 1181.87,
+      "dangerLevel": 5426.25,
+      "extremeDangerLevel": 9991.84
+    },
+    "gaugeValueUnit": "METERS",
+    "currentLevel": 2641.74,
+    "forecastTimestamp": "2025-06-21T11:42:42.119441",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_balochistan_017",
+    "severity": "NONE",
+    "forecastTrend": "STABLE",
+    "thresholds": {
+      "warningLevel": 2681.05,
+      "dangerLevel": 3412.77,
+      "extremeDangerLevel": 8482.08
+    },
+    "gaugeValueUnit": "METERS",
+    "currentLevel": 1011.27,
+    "forecastTimestamp": "2025-06-21T11:42:42.119444",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_punjab_019",
+    "severity": "EXTREME",
+    "forecastTrend": "STABLE",
+    "thresholds": {
+      "warningLevel": 1571.71,
+      "dangerLevel": 5613.11,
+      "extremeDangerLevel": 9589.54
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 2343.55,
+    "forecastTimestamp": "2025-06-21T11:42:42.119447",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_020",
+    "severity": "SEVERE",
+    "forecastTrend": "FALLING",
+    "thresholds": {
+      "warningLevel": 2783.16,
+      "dangerLevel": 3989.56,
+      "extremeDangerLevel": 8999.83
+    },
+    "gaugeValueUnit": "METERS",
+    "currentLevel": 2025.99,
+    "forecastTimestamp": "2025-06-21T11:42:42.119450",
+    "hasInundationMap": false
+  },
+  {
+    "gaugeId": "pk_sindh_021",
+    "severity": "MINOR",
+    "forecastTrend": "STABLE",
+    "thresholds": {
+      "warningLevel": 1606.82,
+      "dangerLevel": 5359.78,
+      "extremeDangerLevel": 6973.28
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 3979.39,
+    "forecastTimestamp": "2025-06-21T11:42:42.119452",
+    "hasInundationMap": false
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_022",
+    "severity": "MODERATE",
+    "forecastTrend": "STABLE",
+    "thresholds": {
+      "warningLevel": 1032.35,
+      "dangerLevel": 3790.58,
+      "extremeDangerLevel": 6851.77
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 1921.69,
+    "forecastTimestamp": "2025-06-21T11:42:42.119455",
+    "hasInundationMap": false
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_023",
+    "severity": "NONE",
+    "forecastTrend": "STABLE",
+    "thresholds": {
+      "warningLevel": 2164.8,
+      "dangerLevel": 5052.87,
+      "extremeDangerLevel": 7825.12
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 4768.11,
+    "forecastTimestamp": "2025-06-21T11:42:42.119458",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_025",
+    "severity": "NONE",
+    "forecastTrend": "RISING",
+    "thresholds": {
+      "warningLevel": 2472.72,
+      "dangerLevel": 4350.81,
+      "extremeDangerLevel": 8071.35
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 6454.19,
+    "forecastTimestamp": "2025-06-21T11:42:42.119461",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_balochistan_026",
+    "severity": "MODERATE",
+    "forecastTrend": "STABLE",
+    "thresholds": {
+      "warningLevel": 2183.54,
+      "dangerLevel": 5235.67,
+      "extremeDangerLevel": 8255.99
+    },
+    "gaugeValueUnit": "METERS",
+    "currentLevel": 6821.69,
+    "forecastTimestamp": "2025-06-21T11:42:42.119464",
+    "hasInundationMap": false
+  },
+  {
+    "gaugeId": "pk_sindh_027",
+    "severity": "NONE",
+    "forecastTrend": "STABLE",
+    "thresholds": {
+      "warningLevel": 2089.76,
+      "dangerLevel": 3119.94,
+      "extremeDangerLevel": 9771.91
+    },
+    "gaugeValueUnit": "METERS",
+    "currentLevel": 3202.69,
+    "forecastTimestamp": "2025-06-21T11:42:42.119467",
+    "hasInundationMap": true
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_028",
+    "severity": "MINOR",
+    "forecastTrend": "FALLING",
+    "thresholds": {
+      "warningLevel": 1755.14,
+      "dangerLevel": 4659.12,
+      "extremeDangerLevel": 6752.42
+    },
+    "gaugeValueUnit": "METERS",
+    "currentLevel": 6720.67,
+    "forecastTimestamp": "2025-06-21T11:42:42.119470",
+    "hasInundationMap": false
+  },
+  {
+    "gaugeId": "pk_sindh_029",
+    "severity": "MODERATE",
+    "forecastTrend": "STABLE",
+    "thresholds": {
+      "warningLevel": 1416.36,
+      "dangerLevel": 4074.21,
+      "extremeDangerLevel": 7653.34
+    },
+    "gaugeValueUnit": "METERS",
+    "currentLevel": 1332.61,
+    "forecastTimestamp": "2025-06-21T11:42:42.119473",
+    "hasInundationMap": false
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_030",
+    "severity": "MINOR",
+    "forecastTrend": "RISING",
+    "thresholds": {
+      "warningLevel": 1009.53,
+      "dangerLevel": 4743.68,
+      "extremeDangerLevel": 7972.3
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "currentLevel": 1372.13,
+    "forecastTimestamp": "2025-06-21T11:42:42.119475",
+    "hasInundationMap": true
+  }
+]

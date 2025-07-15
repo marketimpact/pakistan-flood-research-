@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c7f23e4346f44d94742ee5a7ee5b7852 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 250px; height: 140px; 
+                background-color: white; border:2px solid grey; z-index:9999; 
+                font-size:14px; padding: 10px">
+    <p><b>Pakistan Flood Hub Coverage</b></p>
+    <p><i class="fa fa-star" style="color:green"></i> Real Pakistani Gauge (High Priority)</p>
+    <p><i class="fa fa-circle" style="color:blue"></i> Major Cities (Reference)</p>
+    <p style="color:red">━━━ Pakistan Boundary</p>
+    <p><small><b>Coverage:</b> 1 gauge found<br>
+    <b>Quality:</b> Verified + Model<br>
+    <b>Status:</b> Limited coverage</small></p>
+    </div>
+    
+    
+                 <h3 align="center" style="font-size:20px"><b>Pakistan Google Flood Hub - REAL DATA</b></h3>
+                 <p align="center">Actual gauge coverage discovered via API - Very Limited</p>
+                 
+    
+            <div class="folium-map" id="map_c7f23e4346f44d94742ee5a7ee5b7852" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c7f23e4346f44d94742ee5a7ee5b7852 = L.map(
+                "map_c7f23e4346f44d94742ee5a7ee5b7852",
+                {
+                    center: [30.3753, 69.3451],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_138514b8a59fd1b875d7f5f825295cd4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_138514b8a59fd1b875d7f5f825295cd4.addTo(map_c7f23e4346f44d94742ee5a7ee5b7852);
+        
+    
+            var marker_827fa59cac599dd507458a4f4761f5a2 = L.marker(
+                [26.060416666665333, 68.93124999999594],
+                {
+}
+            ).addTo(map_c7f23e4346f44d94742ee5a7ee5b7852);
+        
+    
+            var icon_c59d201f034eaa122f5d032359a3532e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16873da344a69e45c640c8046e568522 = L.popup({
+  "maxWidth": 350,
+});
+
+        
+            
+                var html_db7175fe1a8f66f51026e89e9f95bd53 = $(`<div id="html_db7175fe1a8f66f51026e89e9f95bd53" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                 <h4><b>Pakistani Gauge (REAL DATA)</b></h4>                 <b>Gauge ID:</b> hybas_4121489010<br>                 <b>Location:</b> 26.0604, 68.9312<br>                 <b>Province:</b> Balochistan (estimated)<br>                 <b>Source:</b> HYBAS<br>                 <b>Quality Verified:</b> Yes<br>                 <b>Has Model:</b> Yes<br>                 <hr>                 <h5>Flood Thresholds:</h5>                 <b>Warning Level:</b> 6.757411956787109 CUBIC_METERS_PER_SECOND<br>                 <b>Danger Level:</b> 34.072757720947266 CUBIC_METERS_PER_SECOND<br>                 <b>Extreme Danger:</b> 207.55108642578125 CUBIC_METERS_PER_SECOND<br>                 <hr>                 <b>Distance to Karachi:</b> ~252 km<br>                 <b>Distance to Sukkur:</b> ~183 km<br>                 <small><i>Data source: Google Flood Hub API</i></small>                 </div>                 </div>`)[0];
+                popup_16873da344a69e45c640c8046e568522.setContent(html_db7175fe1a8f66f51026e89e9f95bd53);
+            
+        
+
+        marker_827fa59cac599dd507458a4f4761f5a2.bindPopup(popup_16873da344a69e45c640c8046e568522)
+        ;
+
+        
+    
+    
+            marker_827fa59cac599dd507458a4f4761f5a2.bindTooltip(
+                `<div>
+                     REAL: hybas_4121489010 - High Priority
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_827fa59cac599dd507458a4f4761f5a2.setIcon(icon_c59d201f034eaa122f5d032359a3532e);
+            
+    
+            var poly_line_ff6b3e9bc87c459978001384c04f2cf2 = L.polyline(
+                [[37.0, 60.0], [37.0, 77.0], [23.0, 77.0], [23.0, 60.0], [37.0, 60.0]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c7f23e4346f44d94742ee5a7ee5b7852);
+        
+    
+        var popup_b12915b0e128be4f65fec5170235215a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_027cade2d21cec9a66276e2e730fafe0 = $(`<div id="html_027cade2d21cec9a66276e2e730fafe0" style="width: 100.0%; height: 100.0%;">Pakistan Boundary (Approximate)</div>`)[0];
+                popup_b12915b0e128be4f65fec5170235215a.setContent(html_027cade2d21cec9a66276e2e730fafe0);
+            
+        
+
+        poly_line_ff6b3e9bc87c459978001384c04f2cf2.bindPopup(popup_b12915b0e128be4f65fec5170235215a)
+        ;
+
+        
+    
+    
+            var circle_marker_5d1772db773367d909a69d86d8362a09 = L.circleMarker(
+                [24.8607, 67.0011],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c7f23e4346f44d94742ee5a7ee5b7852);
+        
+    
+        var popup_5912fc9f068a38b679b9cc2d12c8af72 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6bd014abd95fce7f3a26888908914c4a = $(`<div id="html_6bd014abd95fce7f3a26888908914c4a" style="width: 100.0%; height: 100.0%;">Karachi (Reference)</div>`)[0];
+                popup_5912fc9f068a38b679b9cc2d12c8af72.setContent(html_6bd014abd95fce7f3a26888908914c4a);
+            
+        
+
+        circle_marker_5d1772db773367d909a69d86d8362a09.bindPopup(popup_5912fc9f068a38b679b9cc2d12c8af72)
+        ;
+
+        
+    
+    
+            circle_marker_5d1772db773367d909a69d86d8362a09.bindTooltip(
+                `<div>
+                     Karachi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e82ec6ae98fb99eb0e0a7bbb9f5a12e5 = L.circleMarker(
+                [31.5497, 74.3436],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c7f23e4346f44d94742ee5a7ee5b7852);
+        
+    
+        var popup_3648fbb3bf42cf93d0dd6bdbf1ae9ae1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37dd22c425e892f019898be5b489555b = $(`<div id="html_37dd22c425e892f019898be5b489555b" style="width: 100.0%; height: 100.0%;">Lahore (Reference)</div>`)[0];
+                popup_3648fbb3bf42cf93d0dd6bdbf1ae9ae1.setContent(html_37dd22c425e892f019898be5b489555b);
+            
+        
+
+        circle_marker_e82ec6ae98fb99eb0e0a7bbb9f5a12e5.bindPopup(popup_3648fbb3bf42cf93d0dd6bdbf1ae9ae1)
+        ;
+
+        
+    
+    
+            circle_marker_e82ec6ae98fb99eb0e0a7bbb9f5a12e5.bindTooltip(
+                `<div>
+                     Lahore
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8772390cd055e154cd95909519a8d122 = L.circleMarker(
+                [33.6844, 73.0479],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c7f23e4346f44d94742ee5a7ee5b7852);
+        
+    
+        var popup_881f355014d3c14fe652713c691ae4dc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_34e4f9c0b52e6449fa7635d036ee684d = $(`<div id="html_34e4f9c0b52e6449fa7635d036ee684d" style="width: 100.0%; height: 100.0%;">Islamabad (Reference)</div>`)[0];
+                popup_881f355014d3c14fe652713c691ae4dc.setContent(html_34e4f9c0b52e6449fa7635d036ee684d);
+            
+        
+
+        circle_marker_8772390cd055e154cd95909519a8d122.bindPopup(popup_881f355014d3c14fe652713c691ae4dc)
+        ;
+
+        
+    
+    
+            circle_marker_8772390cd055e154cd95909519a8d122.bindTooltip(
+                `<div>
+                     Islamabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3fcb8211ca1e15d3a7de7170542bbacb = L.circleMarker(
+                [30.1798, 66.975],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c7f23e4346f44d94742ee5a7ee5b7852);
+        
+    
+        var popup_85662da79f8057db729119c39095f31b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc2b62b3edc6621500418086570f51af = $(`<div id="html_fc2b62b3edc6621500418086570f51af" style="width: 100.0%; height: 100.0%;">Quetta (Reference)</div>`)[0];
+                popup_85662da79f8057db729119c39095f31b.setContent(html_fc2b62b3edc6621500418086570f51af);
+            
+        
+
+        circle_marker_3fcb8211ca1e15d3a7de7170542bbacb.bindPopup(popup_85662da79f8057db729119c39095f31b)
+        ;
+
+        
+    
+    
+            circle_marker_3fcb8211ca1e15d3a7de7170542bbacb.bindTooltip(
+                `<div>
+                     Quetta
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_07f378a74290d8895318b655ddd0e46d = L.circleMarker(
+                [27.705, 68.8579],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c7f23e4346f44d94742ee5a7ee5b7852);
+        
+    
+        var popup_ff6f91e298f623d838545a8b3ade12b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7d11b7114ec5ace53f2ffe73febe9d41 = $(`<div id="html_7d11b7114ec5ace53f2ffe73febe9d41" style="width: 100.0%; height: 100.0%;">Sukkur (Reference)</div>`)[0];
+                popup_ff6f91e298f623d838545a8b3ade12b5.setContent(html_7d11b7114ec5ace53f2ffe73febe9d41);
+            
+        
+
+        circle_marker_07f378a74290d8895318b655ddd0e46d.bindPopup(popup_ff6f91e298f623d838545a8b3ade12b5)
+        ;
+
+        
+    
+    
+            circle_marker_07f378a74290d8895318b655ddd0e46d.bindTooltip(
+                `<div>
+                     Sukkur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1ae2d2166d32220080618979a1230ecc = L.circleMarker(
+                [25.396, 68.3578],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 3}
+            ).addTo(map_c7f23e4346f44d94742ee5a7ee5b7852);
+        
+    
+        var popup_c52ec307c144cb4554e9c0c8ba39e8a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4bc07baf0d65423a5d54e26c72ce214d = $(`<div id="html_4bc07baf0d65423a5d54e26c72ce214d" style="width: 100.0%; height: 100.0%;">Hyderabad (Reference)</div>`)[0];
+                popup_c52ec307c144cb4554e9c0c8ba39e8a6.setContent(html_4bc07baf0d65423a5d54e26c72ce214d);
+            
+        
+
+        circle_marker_1ae2d2166d32220080618979a1230ecc.bindPopup(popup_c52ec307c144cb4554e9c0c8ba39e8a6)
+        ;
+
+        
+    
+    
+            circle_marker_1ae2d2166d32220080618979a1230ecc.bindTooltip(
+                `<div>
+                     Hyderabad
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

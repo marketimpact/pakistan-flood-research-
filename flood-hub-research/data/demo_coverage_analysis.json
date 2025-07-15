@@ -1,0 +1,96 @@
+{
+  "summary": {
+    "total_gauges": 75,
+    "quality_verified": 50,
+    "has_model": 49,
+    "quality_and_model": 33,
+    "by_province": {
+      "Khyber Pakhtunkhwa": 20,
+      "Unknown": 16,
+      "Punjab": 15,
+      "Sindh": 12,
+      "Balochistan": 12
+    },
+    "by_source": {
+      "PMD": 22,
+      "WAPDA": 21,
+      "HYBAS": 17,
+      "SUPARCO": 15
+    },
+    "rivers_with_names": 64,
+    "sites_with_names": 75,
+    "unique_rivers": 14,
+    "river_list": [
+      "Shyok",
+      "Chenab",
+      "Chitral",
+      "Kabul",
+      "Kurram",
+      "Hunza",
+      "Indus",
+      "Sutlej",
+      "Kuram",
+      "Shah Alam",
+      "Swat",
+      "Jhelum",
+      "Ravi",
+      "Gilgit"
+    ],
+    "quality_verified_pct": 66.7,
+    "has_model_pct": 65.3,
+    "quality_and_model_pct": 44.0
+  },
+  "river_coverage": {
+    "Indus": {
+      "total_gauges": 4,
+      "quality_verified": 3,
+      "has_model": 2,
+      "provinces": {
+        "Khyber Pakhtunkhwa": 2,
+        "Balochistan": 1,
+        "Sindh": 1
+      }
+    },
+    "Jhelum": {
+      "total_gauges": 1,
+      "quality_verified": 0,
+      "has_model": 0,
+      "provinces": {
+        "Balochistan": 1
+      }
+    },
+    "Chenab": {
+      "total_gauges": 5,
+      "quality_verified": 3,
+      "has_model": 3,
+      "provinces": {
+        "Unknown": 2,
+        "Khyber Pakhtunkhwa": 2,
+        "Sindh": 1
+      }
+    },
+    "Ravi": {
+      "total_gauges": 4,
+      "quality_verified": 3,
+      "has_model": 4,
+      "provinces": {
+        "Unknown": 2,
+        "Punjab": 1,
+        "Khyber Pakhtunkhwa": 1
+      }
+    },
+    "Sutlej": {
+      "total_gauges": 6,
+      "quality_verified": 4,
+      "has_model": 4,
+      "provinces": {
+        "Punjab": 2,
+        "Khyber Pakhtunkhwa": 1,
+        "Balochistan": 1,
+        "Sindh": 1,
+        "Unknown": 1
+      }
+    }
+  },
+  "generated_at": "2025-06-20T11:43:46.403775"
+}

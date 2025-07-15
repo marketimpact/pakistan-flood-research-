@@ -1,0 +1,39 @@
+{
+  "gauge_metadata": {
+    "location": {
+      "latitude": 26.060416666665333,
+      "longitude": 68.93124999999594
+    },
+    "siteName": "",
+    "source": "HYBAS",
+    "river": "",
+    "gaugeId": "hybas_4121489010",
+    "qualityVerified": true,
+    "hasModel": true
+  },
+  "flood_status": {
+    "error": "404 Client Error: Not Found for url: https://floodforecasting.googleapis.com/v1/floodStatus?gaugeId=hybas_4121489010&key=AIzaSyB0d7jLuqXjDJW_BQxOyCrBVt97zse7S-M"
+  },
+  "gauge_model": {
+    "gaugeId": "hybas_4121489010",
+    "thresholds": {
+      "warningLevel": 6.757411956787109,
+      "dangerLevel": 34.072757720947266,
+      "extremeDangerLevel": 207.55108642578125
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "qualityVerified": true,
+    "gaugeModelId": "b6c4cc95bebe8f21ae5ccc0cdf1465ecbb58c2a4ab686fbbb0976663909698fe"
+  },
+  "analysis_metadata": {
+    "analyzed_at": "2025-06-20T14:35:25.698011",
+    "suitability_score": 8,
+    "recommendation": "HIGH PRIORITY - Excellent for Pak-FEWS monitoring",
+    "assessment_points": [
+      "\u2713 Quality verified (high reliability)",
+      "\u2713 Has predictive model (forecast capability)",
+      "\u26a0 No real-time flood status",
+      "\u2713 Threshold data available"
+    ]
+  }
+}

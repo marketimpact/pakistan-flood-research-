@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-06-20T11:36:08.536656+00:00",
+  "gauge_id": "hybas_4120570410",
+  "gauge_info": {
+    "location": {
+      "latitude": 36.38541666666527,
+      "longitude": 72.20624999999598
+    },
+    "siteName": "",
+    "source": "HYBAS",
+    "river": "",
+    "gaugeId": "hybas_4120570410",
+    "qualityVerified": false,
+    "hasModel": true
+  },
+  "flood_status": null,
+  "gauge_model": {
+    "gaugeId": "hybas_4120570410",
+    "thresholds": {
+      "warningLevel": 59.336181640625,
+      "dangerLevel": 68.96259307861328,
+      "extremeDangerLevel": 80.02579498291016
+    },
+    "gaugeValueUnit": "CUBIC_METERS_PER_SECOND",
+    "qualityVerified": false,
+    "gaugeModelId": "b431970663053b1e8f876e18ce25b054ba2be855747b2d97f764fc2b192a4359"
+  }
+}

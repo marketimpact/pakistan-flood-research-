@@ -1,0 +1,242 @@
+[
+  {
+    "gaugeId": "pk_gilgit-baltistan_000",
+    "thresholds": {
+      "warningLevel": 1862.98,
+      "dangerLevel": 5736.9,
+      "extremeDangerLevel": 7894.32
+    },
+    "units": "METERS",
+    "returnPeriods": {
+      "twoYear": 952.95,
+      "fiveYear": 3065.22,
+      "twentyYear": 5315.46
+    },
+    "modelType": "HYDROLOGICAL",
+    "lastUpdated": "2025-06-20T11:42:42.119716"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_001",
+    "thresholds": {
+      "warningLevel": 2977.19,
+      "dangerLevel": 3242.93,
+      "extremeDangerLevel": 6477.8
+    },
+    "units": "CUBIC_METERS_PER_SECOND",
+    "returnPeriods": {
+      "twoYear": 1942.68,
+      "fiveYear": 2196.54,
+      "twentyYear": 6859.1
+    },
+    "modelType": "HYDRAULIC",
+    "lastUpdated": "2025-06-20T11:42:42.119720"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_002",
+    "thresholds": {
+      "warningLevel": 2155.24,
+      "dangerLevel": 5179.81,
+      "extremeDangerLevel": 6928.88
+    },
+    "units": "CUBIC_METERS_PER_SECOND",
+    "returnPeriods": {
+      "twoYear": 889.92,
+      "fiveYear": 3778.72,
+      "twentyYear": 5384.34
+    },
+    "modelType": "STATISTICAL",
+    "lastUpdated": "2025-06-20T11:42:42.119724"
+  },
+  {
+    "gaugeId": "pk_punjab_003",
+    "thresholds": {
+      "warningLevel": 1046.74,
+      "dangerLevel": 4029.46,
+      "extremeDangerLevel": 6736.5
+    },
+    "units": "CUBIC_METERS_PER_SECOND",
+    "returnPeriods": {
+      "twoYear": 1280.33,
+      "fiveYear": 2086.69,
+      "twentyYear": 4707.26
+    },
+    "modelType": "HYDROLOGICAL",
+    "lastUpdated": "2025-06-20T11:42:42.119726"
+  },
+  {
+    "gaugeId": "pk_sindh_004",
+    "thresholds": {
+      "warningLevel": 1622.7,
+      "dangerLevel": 3287.52,
+      "extremeDangerLevel": 7796.52
+    },
+    "units": "CUBIC_METERS_PER_SECOND",
+    "returnPeriods": {
+      "twoYear": 938.76,
+      "fiveYear": 2250.57,
+      "twentyYear": 7062.3
+    },
+    "modelType": "HYDRAULIC",
+    "lastUpdated": "2025-06-20T11:42:42.119729"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_005",
+    "thresholds": {
+      "warningLevel": 1385.52,
+      "dangerLevel": 5619.65,
+      "extremeDangerLevel": 7589.62
+    },
+    "units": "METERS",
+    "returnPeriods": {
+      "twoYear": 1457.33,
+      "fiveYear": 2181.65,
+      "twentyYear": 6447.22
+    },
+    "modelType": "HYDRAULIC",
+    "lastUpdated": "2025-06-20T11:42:42.119732"
+  },
+  {
+    "gaugeId": "pk_punjab_008",
+    "thresholds": {
+      "warningLevel": 1463.95,
+      "dangerLevel": 5299.07,
+      "extremeDangerLevel": 8522.65
+    },
+    "units": "CUBIC_METERS_PER_SECOND",
+    "returnPeriods": {
+      "twoYear": 1235.29,
+      "fiveYear": 2129.04,
+      "twentyYear": 4957.16
+    },
+    "modelType": "HYDROLOGICAL",
+    "lastUpdated": "2025-06-20T11:42:42.119735"
+  },
+  {
+    "gaugeId": "pk_gilgit-baltistan_009",
+    "thresholds": {
+      "warningLevel": 2557.27,
+      "dangerLevel": 5030.5,
+      "extremeDangerLevel": 6496.48
+    },
+    "units": "METERS",
+    "returnPeriods": {
+      "twoYear": 1195.75,
+      "fiveYear": 2769.03,
+      "twentyYear": 4346.03
+    },
+    "modelType": "STATISTICAL",
+    "lastUpdated": "2025-06-20T11:42:42.119738"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_010",
+    "thresholds": {
+      "warningLevel": 2859.67,
+      "dangerLevel": 4613.68,
+      "extremeDangerLevel": 8148.62
+    },
+    "units": "METERS",
+    "returnPeriods": {
+      "twoYear": 1026.17,
+      "fiveYear": 3580.26,
+      "twentyYear": 6447.39
+    },
+    "modelType": "STATISTICAL",
+    "lastUpdated": "2025-06-20T11:42:42.119740"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_011",
+    "thresholds": {
+      "warningLevel": 2620.8,
+      "dangerLevel": 5011.75,
+      "extremeDangerLevel": 9102.51
+    },
+    "units": "METERS",
+    "returnPeriods": {
+      "twoYear": 1295.94,
+      "fiveYear": 3579.07,
+      "twentyYear": 4159.81
+    },
+    "modelType": "HYDROLOGICAL",
+    "lastUpdated": "2025-06-20T11:42:42.119743"
+  },
+  {
+    "gaugeId": "pk_sindh_015",
+    "thresholds": {
+      "warningLevel": 2098.36,
+      "dangerLevel": 5550.85,
+      "extremeDangerLevel": 7339.55
+    },
+    "units": "METERS",
+    "returnPeriods": {
+      "twoYear": 1380.52,
+      "fiveYear": 2799.5,
+      "twentyYear": 6070.2
+    },
+    "modelType": "HYDRAULIC",
+    "lastUpdated": "2025-06-20T11:42:42.119746"
+  },
+  {
+    "gaugeId": "pk_balochistan_016",
+    "thresholds": {
+      "warningLevel": 1844.86,
+      "dangerLevel": 3615.91,
+      "extremeDangerLevel": 8169.37
+    },
+    "units": "METERS",
+    "returnPeriods": {
+      "twoYear": 857.41,
+      "fiveYear": 3300.08,
+      "twentyYear": 5098.2
+    },
+    "modelType": "HYDRAULIC",
+    "lastUpdated": "2025-06-20T11:42:42.119749"
+  },
+  {
+    "gaugeId": "pk_punjab_018",
+    "thresholds": {
+      "warningLevel": 2690.74,
+      "dangerLevel": 3014.4,
+      "extremeDangerLevel": 8311.48
+    },
+    "units": "METERS",
+    "returnPeriods": {
+      "twoYear": 1679.46,
+      "fiveYear": 3713.53,
+      "twentyYear": 5213.98
+    },
+    "modelType": "HYDROLOGICAL",
+    "lastUpdated": "2025-06-20T11:42:42.119751"
+  },
+  {
+    "gaugeId": "pk_khyber_pakhtunkhwa_020",
+    "thresholds": {
+      "warningLevel": 2733.52,
+      "dangerLevel": 3432.42,
+      "extremeDangerLevel": 9513.76
+    },
+    "units": "CUBIC_METERS_PER_SECOND",
+    "returnPeriods": {
+      "twoYear": 1685.4,
+      "fiveYear": 2266.16,
+      "twentyYear": 6409.94
+    },
+    "modelType": "STATISTICAL",
+    "lastUpdated": "2025-06-20T11:42:42.119754"
+  },
+  {
+    "gaugeId": "pk_sindh_021",
+    "thresholds": {
+      "warningLevel": 2333.5,
+      "dangerLevel": 4215.02,
+      "extremeDangerLevel": 6801.12
+    },
+    "units": "METERS",
+    "returnPeriods": {
+      "twoYear": 1370.81,
+      "fiveYear": 3552.2,
+      "twentyYear": 4105.81
+    },
+    "modelType": "STATISTICAL",
+    "lastUpdated": "2025-06-20T11:42:42.119757"
+  }
+]
