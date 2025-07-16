@@ -58,5 +58,36 @@ ENV/
 *_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]_[0-9][0-9][0-9][0-9][0-9][0-9].csv
 *_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]_[0-9][0-9][0-9][0-9][0-9][0-9].json
 *_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]_[0-9][0-9][0-9][0-9][0-9][0-9].md
+
+# Microsoft Word files (keep .md versions)
 *.docx
 ~$*.docx
+
+# Large CSV data files
+comprehensive_flood_analysis_*.csv
+gauge_priority_ranking_*.csv
+gauge_inventory_complete_*.csv
+high_priority_gauges_*.csv
+external_stations_reference_*.csv
+
+# Large JSON data files
+comprehensive_analysis_report_*.json
+data_source_analysis_*.json
+pakistan_gauges_*.json
+chitral_flood_data.json
+pakistan_flood_history_analysis.json
+
+# Generated visualizations
+*.png
+*.html
+screenshots/
+
+# But keep important files
+!README.md
+!CLAUDE.md
+!*.md
+!requirements.txt
+!plan/
+!scripts/
+!reports/
+!*.py
