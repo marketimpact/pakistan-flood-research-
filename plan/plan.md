@@ -1,136 +1,43 @@
-# Pakistan Flood Gauge Data Platform - Render Deployment Plan (v3 - Django)
+# Pakistan Flood Data Platform - Professional Architecture Plan (v4)
 
-This document outlines the plan for creating and deploying a full-featured data platform on Render using the Django framework. The platform will collect, store, visualize, and export flood gauge data from the Google Flood Hub API for Pakistan.
+This document outlines a revised, production-grade plan for the Flood Data Platform, incorporating Django best practices for security, performance, and maintainability.
 
-## 1. Project Goal
+**Methodology:** The project will be built using a strict Test-Driven Development (TDD) approach, organized into features, and deployed with separate environments.
 
-The primary goal remains the same: to build a reliable, secure, and user-friendly platform that automates data collection, creates a historical archive, provides secure access with a UI, and enables data export.
+### 1. Core Architectural Changes
 
-## 2. High-Level Architecture
+Based on the architectural review, the following patterns will be enforced:
 
-The architecture is simplified by leveraging Django's integrated nature.
+1.  **Feature-Based App Structure:** We will organize by application feature, not by data models.
+    *   `core`: For shared models, base functionality, and the service layer.
+    *   `users`: For the custom User model and user-related logic.
+    *   `api`: For the Django REST Framework (DRF) endpoints.
+    *   `dashboard`: For the user-facing web pages and views.
+2.  **Service Layer:** All business logic (e.g., interacting with Google APIs, data processing) will be isolated in a `services` directory, decoupled from views and models.
+3.  **Environment-Specific Settings:** The `settings.py` file will be split into a `settings/` directory (`base.py`, `development.py`, `production.py`).
+4.  **Custom User Model:** We will implement a custom `User` model extending `AbstractUser` from the start.
+5.  **API-First with DRF:** The primary interface for data will be a versioned API built with Django REST Framework.
 
-1.  **Database:** A persistent **PostgreSQL** database. This is critical for data persistence and is not negotiable.
-2.  **Web Application (Django):** A single, monolithic Django application that handles:
-    *   **Backend Logic:** All data processing and business logic.
-    *   **User Authentication:** Manages user login, logout, and sessions.
-    *   **Frontend UI:** Renders HTML pages using the Django Templating Language.
-    *   **Admin Panel:** Provides a ready-to-use interface for data management.
-3.  **Scheduled Jobs:** Implemented as Django Management Commands and triggered by Render Cron Jobs.
+### 2. Database & Model Enhancements
 
-### Technology Stack
-- **Language:** Python 3.11+
-- **Web Framework:** **Django**
-- **Database:** **PostgreSQL** (using Render's managed service)
-- **Scheduling:** Render Cron Jobs executing Django Management Commands
-- **Deployment Platform:** Render
+*   **Primary Keys:** All models will use `UUIDField` as their primary key.
+*   **Indexing:** `db_index=True` will be added to all foreign keys and frequently queried fields.
+*   **Field Choices:** Fields with a limited set of options will use Django's `choices` option.
+*   **Model Validation:** `clean()` methods will be used for complex validation.
 
-## 3. Data Model (Django Models)
+### 3. Security & Production Readiness
 
-The database schema will be managed by the Django ORM.
+*   **Production Settings:** `production.py` will enforce `DEBUG = False`, `SECURE_SSL_REDIRECT = True`, `SESSION_COOKIE_SECURE = True`, and `CSRF_COOKIE_SECURE = True`.
+*   **Admin URL:** The default `/admin/` URL will be changed to a non-guessable path.
+*   **Health Checks:** A dedicated `/health/` endpoint will be created for monitoring.
+*   **Error Handling & Retries:** The data collection service will implement robust error logging and a retry mechanism for external API calls.
+*   **Transactions:** Database writes will be wrapped in `transaction.atomic()` blocks.
 
-### `User` (Built-in)
-We will use Django's built-in `User` model, which already includes fields for `username`, `password`, `is_active`, etc.
+### 4. Performance Optimizations
 
-### `gauges.Gauge`
-- `gauge_id` (CharField, Unique) - The ID from the Google API.
-- `site_name`, `river_name` (CharField)
-- `latitude`, `longitude` (FloatField)
-- `source` (CharField)
-- `quality_verified`, `has_model` (BooleanField)
-- `created_at`, `updated_at` (DateTimeField, auto-managed)
+*   **Efficient Data Export:** CSV exports will use `queryset.iterator()` to stream data directly from the database.
+*   **Pagination:** All API list endpoints will have pagination enforced.
+*   **Caching (Future):** The architecture will be designed to easily accommodate Redis for caching in a future phase.
 
-### `readings.Reading`
-- `gauge` (ForeignKey to `gauges.Gauge`)
-- `timestamp` (DateTimeField with Timezone)
-- `water_level` (FloatField)
-- `flood_severity` (CharField)
-- `is_flooding` (BooleanField)
-
-### `predictions.Prediction`
-- `gauge` (ForeignKey to `gauges.Gauge`)
-- `fetched_at` (DateTimeField with Timezone)
-- `prediction_for` (DateTimeField with Timezone)
-- `predicted_water_level` (FloatField)
-- `upper_bound`, `lower_bound` (FloatField, Nullable)
-
-## 4. Key Features & Implementation
-
-### Django Admin Panel
-- **Benefit:** Out-of-the-box CRUD (Create, Read, Update, Delete) interface for all our models.
-- **Action:** We will register our `Gauge`, `Reading`, and `Prediction` models with the admin site. This will allow administrators to easily view, manage, and debug the collected data without building a custom interface.
-
-### Frontend UI (Django Templates)
-- **Login Page:** Use Django's built-in `LoginView`.
-- **Dashboard:** A view that lists all `Gauge` objects.
-- **Gauge Detail Page:** A view that shows details for a specific `Gauge` and uses a library like Chart.js to visualize its historical `Reading` data.
-
-### Data Export
-- **Implementation:** A Django view that queries the `Reading` data for a specific gauge, uses Python's `csv` module to generate a CSV file in memory, and returns it in an `HttpResponse` with the correct headers to trigger a download.
-
-## 5. Core Logic - Django Management Commands
-
-We will create custom management commands for our scheduled tasks. This is the standard Django way to handle such operations.
-
-- **`collect_data` command (`python manage.py collect_data`):**
-    - Contains the hourly logic to fetch data from the `floodStatus` and `gaugeModels` APIs and save it to the `Reading` and `Prediction` tables.
-- **`update_gauges` command (`python manage.py update_gauges`):**
-    - Contains the daily logic to query the Google `gauges` API and update our `Gauge` table.
-
-## 6. Updated Deployment Plan on Render (`render.yaml`)
-
-The `render.yaml` is updated for a standard Django deployment.
-
-```yaml
-services:
-  # 1. The PostgreSQL Database (Free tier is fine for starting)
-  - type: pserv
-    name: flood-data-db
-    plan: free
-    postgresMajorVersion: 14
-
-  # 2. The Django Web Service
-  - type: web
-    name: flood-data-platform
-    env: python
-    buildCommand: |
-      pip install -r requirements.txt
-      python manage.py migrate # Automatically run migrations on deploy
-    startCommand: 'gunicorn project.wsgi:application' # Use Gunicorn for production
-    envVars:
-      - key: DATABASE_URL
-        fromService:
-          type: pserv
-          name: flood-data-db
-          property: connectionString
-      - key: GOOGLE_API_KEY
-        sync: false
-      - key: SECRET_KEY # For Django sessions
-        sync: false
-      - key: WEB_CONCURRENCY
-        value: 4
-
-cron:
-  # 3. The Hourly Cron Job
-  - name: hourly-data-collection
-    schedule: '0 * * * *'
-    command: 'python manage.py collect_data'
-    service:
-      name: flood-data-platform
-
-  # 4. The Daily Cron Job
-  - name: daily-gauge-update
-    schedule: '0 1 * * *'
-    command: 'python manage.py update_gauges'
-    service:
-      name: flood-data-platform
-```
-
-### Next Steps
-1.  Initialize a new Django project (`django-admin startproject ...`).
-2.  Create Django apps for `gauges`, `readings`, and `predictions`.
-3.  Define the models in `models.py` for each app.
-4.  Implement the `collect_data` and `update_gauges` management commands.
-5.  Create the views, templates, and URL patterns for the frontend.
-6.  Register models with the Django admin site.
-7.  Finalize the `render.yaml` and deploy.
+---
+*This revised plan supersedes all previous versions and will be used as the blueprint for the phased implementation.*

@@ -1,0 +1,207 @@
+{
+  "discovery_date": "2025-07-17T11:52:35.738695",
+  "total_found": 10,
+  "quality_verified": 0,
+  "gauges": [
+    {
+      "gauge_id": "hybas_4121133890",
+      "data": {
+        "location": {
+          "latitude": 12.947916666665606,
+          "longitude": 99.48124999999544
+        },
+        "siteName": "",
+        "source": "HYBAS",
+        "river": "",
+        "gaugeId": "hybas_4121133890",
+        "qualityVerified": false,
+        "hasModel": true
+      },
+      "quality_verified": false,
+      "location": {
+        "latitude": 12.947916666665606,
+        "longitude": 99.48124999999544
+      }
+    },
+    {
+      "gauge_id": "hybas_4121551180",
+      "data": {
+        "location": {
+          "latitude": 20.60208333333219,
+          "longitude": 100.64791666666213
+        },
+        "siteName": "",
+        "source": "HYBAS",
+        "river": "",
+        "gaugeId": "hybas_4121551180",
+        "qualityVerified": false,
+        "hasModel": true
+      },
+      "quality_verified": false,
+      "location": {
+        "latitude": 20.60208333333219,
+        "longitude": 100.64791666666213
+      }
+    },
+    {
+      "gauge_id": "hybas_4121550810",
+      "data": {
+        "location": {
+          "latitude": 20.66458333333213,
+          "longitude": 93.23958333332888
+        },
+        "siteName": "",
+        "source": "HYBAS",
+        "river": "",
+        "gaugeId": "hybas_4121550810",
+        "qualityVerified": false,
+        "hasModel": true
+      },
+      "quality_verified": false,
+      "location": {
+        "latitude": 20.66458333333213,
+        "longitude": 93.23958333332888
+      }
+    },
+    {
+      "gauge_id": "hybas_4121550850",
+      "data": {
+        "location": {
+          "latitude": 20.66041666666547,
+          "longitude": 99.34791666666216
+        },
+        "siteName": "",
+        "source": "HYBAS",
+        "river": "",
+        "gaugeId": "hybas_4121550850",
+        "qualityVerified": false,
+        "hasModel": true
+      },
+      "quality_verified": false,
+      "location": {
+        "latitude": 20.66041666666547,
+        "longitude": 99.34791666666216
+      }
+    },
+    {
+      "gauge_id": "hybas_4120568630",
+      "data": {
+        "location": {
+          "latitude": 36.43958333333194,
+          "longitude": 72.35208333332935
+        },
+        "siteName": "",
+        "source": "HYBAS",
+        "river": "",
+        "gaugeId": "hybas_4120568630",
+        "qualityVerified": false,
+        "hasModel": true
+      },
+      "quality_verified": false,
+      "location": {
+        "latitude": 36.43958333333194,
+        "longitude": 72.35208333332935
+      }
+    },
+    {
+      "gauge_id": "hybas_4121551330",
+      "data": {
+        "location": {
+          "latitude": 20.581249999998875,
+          "longitude": 100.16041666666229
+        },
+        "siteName": "",
+        "source": "HYBAS",
+        "river": "",
+        "gaugeId": "hybas_4121551330",
+        "qualityVerified": false,
+        "hasModel": true
+      },
+      "quality_verified": false,
+      "location": {
+        "latitude": 20.581249999998875,
+        "longitude": 100.16041666666229
+      }
+    },
+    {
+      "gauge_id": "hybas_4121134950",
+      "data": {
+        "location": {
+          "latitude": 12.84791666666564,
+          "longitude": 76.33124999999598
+        },
+        "siteName": "",
+        "source": "HYBAS",
+        "river": "",
+        "gaugeId": "hybas_4121134950",
+        "qualityVerified": false,
+        "hasModel": true
+      },
+      "quality_verified": false,
+      "location": {
+        "latitude": 12.84791666666564,
+        "longitude": 76.33124999999598
+      }
+    },
+    {
+      "gauge_id": "hybas_4121550660",
+      "data": {
+        "location": {
+          "latitude": 20.685416666665446,
+          "longitude": 79.25208333332927
+        },
+        "siteName": "",
+        "source": "HYBAS",
+        "river": "",
+        "gaugeId": "hybas_4121550660",
+        "qualityVerified": false,
+        "hasModel": true
+      },
+      "quality_verified": false,
+      "location": {
+        "latitude": 20.685416666665446,
+        "longitude": 79.25208333332927
+      }
+    },
+    {
+      "gauge_id": "hybas_4120352790",
+      "data": {
+        "location": {
+          "latitude": 42.86041666666512,
+          "longitude": 79.24374999999583
+        },
+        "siteName": "",
+        "source": "HYBAS",
+        "river": "",
+        "gaugeId": "hybas_4120352790",
+        "qualityVerified": false,
+        "hasModel": true
+      },
+      "quality_verified": false,
+      "location": {
+        "latitude": 42.86041666666512,
+        "longitude": 79.24374999999583
+      }
+    },
+    {
+      "gauge_id": "hybas_4121489740",
+      "data": {
+        "location": {
+          "latitude": 26.010416666665435,
+          "longitude": 85.01041666666242
+        },
+        "siteName": "",
+        "source": "HYBAS",
+        "river": "",
+        "gaugeId": "hybas_4121489740",
+        "qualityVerified": false,
+        "hasModel": true
+      },
+      "quality_verified": false,
+      "location": {
+        "latitude": 26.010416666665435,
+        "longitude": 85.01041666666242
+      }
+    }
+  ]
+}

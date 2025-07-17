@@ -1,16 +1,23 @@
-# Phase 3: User Authentication & Basic Views (TDD)
+# Phase 3: API Development with DRF (TDD)
 
-**Goal:** To implement a secure login system and a dashboard page that displays the collected data.
+**Goal:** To build a secure, documented, versioned, and tested API for all core models using Django REST Framework.
 
 **Deliverables:**
-*   Working login and logout functionality.
-*   A dashboard view, protected by login, that lists all gauges.
+*   DRF installed and configured with **throttling and CORS**.
+*   **OpenAPI/Swagger documentation** via `drf-spectacular`.
+*   Serializers and ViewSets for all core models.
+*   Passing API tests ensuring authentication, permissions, throttling, and correct data structures.
 
 | Step | Action (Programmer) | Architect's Instructions & TDD Strategy | Status |
 | :--- | :--- | :--- | :--- |
-| 3.1 | **Write Failing View Test** | In `gauges/tests/test_views.py`, write a test that tries to access a `/dashboard/` URL. Assert that the response is a 302 redirect to the login page. **The test must fail** (404, as the URL doesn't exist). | To Do |
-| 3.2 | **Write View & URL Code** | Create the `DashboardView` and the corresponding URL pattern. Add the `@login_required` decorator. | To Do |
-| 3.3 | **Run Test to Pass** | **Run the test; it must now pass.** | To Do |
-| 3.4 | **Write Content Test** | Write a new test that creates a user, logs them in via the test client, creates a test `Gauge` in the database, and then accesses `/dashboard/`. Assert that the gauge's name appears in the response content. **The test must fail.** | To Do |
-| 3.5 | **Implement View Logic** | Update the `DashboardView` to fetch all `Gauge` objects and pass them to a template. Create the template to render the list. | To Do |
+| 3.1 | Install Dependencies | `pip install djangorestframework djangorestframework-simplejwt drf-spectacular django-cors-headers` | To Do |
+| 3.2 | Configure DRF & CORS | In `settings/base.py`, add `rest_framework`, `drf_spectacular`, and `corsheaders` to `INSTALLED_APPS`. Configure `REST_FRAMEWORK` with default permissions, authentication (JWT), and **throttling rates**. Configure `CORS_ALLOWED_ORIGINS`. | To Do |
+| 3.3 | Create `api` App | Create the `api` app to house all API-related code. | To Do |
+| 3.4 | **Write Failing Serializer Test** | In `api/tests/test_serializers.py`, write a test that attempts to serialize a `Gauge` object. **The test must fail.** | To Do |
+| 3.5 | **Write Serializer** | In `api/serializers.py`, create the `GaugeSerializer`. | To Do |
 | 3.6 | **Run Test to Pass** | **Run the test; it must now pass.** | To Do |
+| 3.7 | **Write Failing ViewSet Test** | In `api/tests/test_views.py`, use `APIClient` to `GET /api/v1/gauges/`. Assert a 401 Unauthorized response. **The test must fail** (404, URL doesn't exist). | To Do |
+| 3.8 | **Write ViewSet & URL** | In `api/views.py`, create the `GaugeViewSet`. In `api/urls.py`, register it with a router. Add the router and `drf-spectacular` URLs to the main project `urls.py`. | To Do |
+| 3.9 | **Run Test to Pass** | **Run the test; it must now pass.** | To Do |
+| 3.10 | Write Authenticated & Throttling Tests | Write new tests that authenticate a user and assert a 200 OK response. Write another test to verify that excessive requests are throttled (429 response). | To Do |
+| 3.11 | Repeat TDD for Other Models | Repeat the TDD cycle for `Reading` and `Prediction` serializers and viewsets. | To Do |
